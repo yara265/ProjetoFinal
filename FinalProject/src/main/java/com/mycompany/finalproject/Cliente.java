@@ -2,11 +2,11 @@ package com.mycompany.finalproject;
 
 public class Cliente {
 
-    public String name;
+    public String nome;
     public Pedido pedido;
     
-    public Cliente(String name, Pedido pedido){
-        this.name = name;
+    public Cliente(String nome, Pedido pedido){
+        this.nome = nome;
         this.pedido = pedido;
     }
     
