@@ -1,4 +1,4 @@
-package com.mycompany.finalproject;
+package ProjetoFinal;
 
 
 public class FinalProject {
