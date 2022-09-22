@@ -2,6 +2,7 @@ package Cardapio;
 
 public class Sanduiche extends Produto{
 
+    public String nome = "Sanduiche";
     public String recheio;
     public String tipoDoPao;
     public String molho;
@@ -25,6 +26,9 @@ public class Sanduiche extends Produto{
         this.molho = molho;
     }
     
-    
+    @Override
+    public void mostrarProduto(){
+        System.out.println();
+    }
     
 }

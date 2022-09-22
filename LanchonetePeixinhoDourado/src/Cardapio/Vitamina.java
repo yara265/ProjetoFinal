@@ -2,6 +2,7 @@ package Cardapio;
 
 public class Vitamina extends Produto{
     
+    public String nome = "Vitamina";
     public String sabor;
     public boolean acucar;
     public double volume;
@@ -25,5 +26,8 @@ public class Vitamina extends Produto{
         this.volume = volume;
     }
 
-    
+    @Override
+    public void mostrarProduto(){
+        System.out.println();
+    }
 }

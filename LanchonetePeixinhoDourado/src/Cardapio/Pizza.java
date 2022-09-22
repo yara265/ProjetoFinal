@@ -2,6 +2,7 @@ package Cardapio;
 
 public class Pizza extends Produto{
     
+    public String nome = "Pizza";
     public String recheio;
     public boolean borda;
 
@@ -19,6 +20,9 @@ public class Pizza extends Produto{
         this.borda = borda;
     }
 
-    
+    @Override
+    public void mostrarProduto(){
+        System.out.println();
+    }
     
 }

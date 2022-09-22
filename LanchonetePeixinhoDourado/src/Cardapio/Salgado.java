@@ -2,6 +2,7 @@ package Cardapio;
 
 public class Salgado extends Produto{
     
+    public String nome = "Salgado";
     public String sabor;
     public String tipo;
     
@@ -19,6 +20,9 @@ public class Salgado extends Produto{
         this.tipo = tipo;
     }
     
-    
+    @Override
+    public void mostrarProduto(){
+        System.out.println();
+    }
     
 }
