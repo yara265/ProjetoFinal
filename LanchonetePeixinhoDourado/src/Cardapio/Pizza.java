@@ -11,6 +11,14 @@ public class Pizza extends Produto{
         this.borda = borda;
     }
 
+    public void setRecheio(String recheio) {
+        this.recheio = recheio;
+    }
+
+    public void setBorda(boolean borda) {
+        this.borda = borda;
+    }
+
     
     
 }
