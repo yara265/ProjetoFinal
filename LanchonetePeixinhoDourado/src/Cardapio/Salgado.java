@@ -1,4 +1,4 @@
-package Cardapio;
+package cardapio;
 
 public class Salgado extends Produto{
     
@@ -6,8 +6,8 @@ public class Salgado extends Produto{
     public String sabor;
     public String tipo;
     
-    public Salgado(double preco, String validade, int quantidade, String sabor, String tipo) {
-        super(preco, validade, quantidade);
+    public Salgado(double preco, String sabor, String tipo) {
+        super(preco);
         this.sabor = sabor;
         this.tipo = tipo;
     }
@@ -22,7 +22,7 @@ public class Salgado extends Produto{
     
     @Override
     public void mostrarProduto(){
-        System.out.println();
+        System.out.println("Produto: " + nome + " de " + sabor + "\nTipo: " + tipo + "\nPreço R$" + preco);
     }
     
 }

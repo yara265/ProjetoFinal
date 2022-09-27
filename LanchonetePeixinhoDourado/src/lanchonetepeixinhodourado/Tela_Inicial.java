@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lanchonetepeixinhodourado;
 
-/**
- *
- * @author yaran
- */
 public class Tela_Inicial extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tela_Inicial
-     */
     public Tela_Inicial() {
         initComponents();
     }

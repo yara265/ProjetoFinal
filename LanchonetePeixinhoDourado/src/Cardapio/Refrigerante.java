@@ -1,4 +1,4 @@
-package Cardapio;
+package cardapio;
 
 public class Refrigerante extends Produto{
     
@@ -6,8 +6,8 @@ public class Refrigerante extends Produto{
     public String marca;
     public double volume;
     
-    public Refrigerante( double preco, String validade, int quantidade, String marca, double volume) {
-        super(preco, validade, quantidade);
+    public Refrigerante( double preco, String marca, double volume) {
+        super(preco);
         this.marca = marca;
         this.volume = volume;
     }
@@ -26,7 +26,6 @@ public class Refrigerante extends Produto{
     
     @Override
     public void mostrarProduto(){
-        System.out.println("Produto: " + nome + "\nMarca: " + marca +" "+ volume +"ml " + "\nQuantidade: " + quantidade +
-        " Validade: " + validade + " Preço R$" + preco);
+        System.out.println("Produto: " + nome + "\nMarca: " + marca +" "+ volume +"ml " + "\nPreço R$" + preco);
     }
 }
