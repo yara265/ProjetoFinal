@@ -7,13 +7,18 @@ public class Pedido {
     public ArrayList<Item> itens = new ArrayList<Item>();
     public String cliente;
     public double valor;
-    public String formaDePagamento;
+    public FormaDePagamento formaDePagamento;
     
-    public Pedido(String cliente, String formaDePagamento){
+    public Pedido(String cliente, FormaDePagamento formaDePagamento){
         this.cliente = cliente;
         this.formaDePagamento = formaDePagamento;
     }
 
+    public void cartao(){
+        if (this.formaDePagamento == formaDePagamento.credito || this.formaDePagamento == formaDePagamento.debito){
+        this.valor+=1;
+        }
+    }
     public ArrayList<Item> getProdutos() {
         return itens;
     }
@@ -26,7 +31,7 @@ public class Pedido {
         return valor;
     }
 
-    public String getFormaDePagamento() {
+    public FormaDePagamento getFormaDePagamento() {
         return formaDePagamento;
     }
 
@@ -42,7 +47,7 @@ public class Pedido {
         this.valor = valor;
     }
 
-    public void setFormaDePagamento(String formaDePagamento) {
+    public void setFormaDePagamento(FormaDePagamento formaDePagamento) {
         this.formaDePagamento = formaDePagamento;
     }
     

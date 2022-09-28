@@ -2,8 +2,8 @@ package pedidos;
 
 public enum FormaDePagamento {
 
-    cartão,
+    debito,
     dinheiro,
-    cheque,
+    credito,
     pix;
 }
