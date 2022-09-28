@@ -12,7 +12,7 @@ public class LanchonetePeixinhoDourado {
         Item i2 =new Item(r1);
         i1.addQuantidade();
         i1.addQuantidade();
-        Pedido ped = new Pedido("Kirk", "cartão");
+        Pedido ped = new Pedido("Kirk", FormaDePagamento.credito);
         ped.addItem(i1);
         ped.addItem(i2);
         System.out.println(ped.valorTotal());

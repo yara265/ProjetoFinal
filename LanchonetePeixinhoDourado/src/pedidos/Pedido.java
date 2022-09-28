@@ -12,9 +12,11 @@ public class Pedido {
     public Pedido(String cliente, FormaDePagamento formaDePagamento){
         this.cliente = cliente;
         this.formaDePagamento = formaDePagamento;
+        this.regraDeNegocio01();
     }
 
-    public void cartao(){
+    public void regraDeNegocio01(){
+        //Se o pagamento for em debito ou em credito, sera acrescentado uma taxa de 1 real.
         if (this.formaDePagamento == formaDePagamento.credito || this.formaDePagamento == formaDePagamento.debito){
         this.valor+=1;
         }
