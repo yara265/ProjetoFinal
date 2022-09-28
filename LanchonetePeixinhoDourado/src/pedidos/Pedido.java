@@ -1,23 +1,21 @@
 package pedidos;
 import java.util.ArrayList;
-import cardapio.Produto;
+import cardap.Produto;
 
 public class Pedido {
 
-    public ArrayList<Produto> produtos;
+    public ArrayList<Item> itens = new ArrayList<Item>();
     public String cliente;
     public double valor;
-    public FormaDePagamento formaDePagamento;
+    public String formaDePagamento;
     
-    public Pedido(ArrayList<Produto> produtos, String cliente, double valor, FormaDePagamento formaDePagamento){
-        this.produtos = produtos;
+    public Pedido(String cliente, String formaDePagamento){
         this.cliente = cliente;
-        this.valor = valor;
         this.formaDePagamento = formaDePagamento;
     }
 
-    public ArrayList<Produto> getProdutos() {
-        return produtos;
+    public ArrayList<Item> getProdutos() {
+        return itens;
     }
 
     public String getCliente() {
@@ -28,12 +26,12 @@ public class Pedido {
         return valor;
     }
 
-    public FormaDePagamento getFormaDePagamento() {
+    public String getFormaDePagamento() {
         return formaDePagamento;
     }
 
-    public void setProdutos(ArrayList<Produto> produtos) {
-        this.produtos = produtos;
+    public void setProdutos(ArrayList<Item> itens) {
+        this.itens = itens;
     }
 
     public void setCliente(String cliente) {
@@ -44,21 +42,35 @@ public class Pedido {
         this.valor = valor;
     }
 
-    public void setFormaDePagamento(FormaDePagamento formaDePagamento) {
+    public void setFormaDePagamento(String formaDePagamento) {
         this.formaDePagamento = formaDePagamento;
     }
-
-    public double calcularPedido(ArrayList<Produto> produtos){
-        double preco = 0;
-        for (Produto i: produtos){
-            preco = preco + i.getPreco();
-        }
-        return preco;
+    
+    public String valorTotal(){
+        return "O valor total do pedido eh de: " + this.valor;
     }
     
-    public void mostrarPedido(ArrayList<Produto> produtos){
-        for (Produto i: produtos){
-            System.out.println(i);
+    public void addItem(Item item){
+        this.itens.add(item);
+        this.calcularPedido(item);
+    }
+    
+    public void removeItem (Item item){
+        this.itens.remove(item);
+    }
+
+    public double calcularPedido(Item produto){
+        this.valor = this.valor + produto.getPreco();
+        return valor;
+    }
+    
+    public void mostrarPedido(){
+        for (Item i: this.itens){
+            System.out.println(i.mostrar());
         }
     }
+    
+    
+
+    
 }

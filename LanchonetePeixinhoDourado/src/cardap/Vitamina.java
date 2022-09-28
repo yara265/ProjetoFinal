@@ -1,4 +1,4 @@
-package cardapio;
+package cardap;
 
 public class Vitamina extends Produto{
     
@@ -8,7 +8,7 @@ public class Vitamina extends Produto{
     public double volume;
     
     public Vitamina(double preco, String sabor, boolean acucar, double volume) {
-        super(preco);
+        super(preco, "Vitamina");
         this.sabor = sabor;
         this.acucar = acucar;
         this.volume = volume;
@@ -27,7 +27,7 @@ public class Vitamina extends Produto{
     }
 
     @Override
-    public void mostrarProduto(){
-        System.out.println();
+    public String mostrarProduto(){
+        return ("Produto: " + nome + " de "+ "\nPreço R$" + preco);
     }
 }

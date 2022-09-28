@@ -1,13 +1,14 @@
-package cardapio;
+package cardap;
 
 
 public class Produto {
 
     public double preco;
+    public String nome;
     
-    public Produto (double preco){
+    public Produto (double preco, String nome){
         this.preco = preco;
-        
+        this.nome = nome;
     }
 
     public double getPreco() {
@@ -18,8 +19,8 @@ public class Produto {
         this.preco = preco;
     }
 
-    public void mostrarProduto(){
-        //System.out.println("Quantidade: " + quantidade + " Validade: " + validade + " Preço: " + preco);
+    public String mostrarProduto(){
+        return ("Quantidade: " + " Validade: " + " Preço: " + preco);
     }
 
 }

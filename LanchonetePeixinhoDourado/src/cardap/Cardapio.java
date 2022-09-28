@@ -1,4 +1,4 @@
-package cardapio;
+package cardap;
 
 public class Cardapio {
     

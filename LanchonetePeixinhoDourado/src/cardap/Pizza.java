@@ -1,13 +1,13 @@
-package cardapio;
+package cardap;
 
 public class Pizza extends Produto{
     
     public String nome = "Pizza";
     public String recheio;
     public boolean borda;
-
+    
     public Pizza(double preco, String recheio, boolean borda) {
-        super(preco);
+        super(preco, "Pizza");
         this.recheio = recheio;
         this.borda = borda;
     }
@@ -21,8 +21,8 @@ public class Pizza extends Produto{
     }
 
     @Override
-    public void mostrarProduto(){
-        System.out.println("Produto: " + nome + " de " + recheio + "\nPreço R$" + preco);
+    public String mostrarProduto(){
+        return ("Produto: " + nome + " de " + recheio + "\nPreço R$" + preco);
         //falta borda
     }
     
