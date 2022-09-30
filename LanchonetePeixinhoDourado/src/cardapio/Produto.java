@@ -1,4 +1,4 @@
-package cardap;
+package cardapio;
 
 
 public class Produto {
@@ -20,7 +20,7 @@ public class Produto {
     }
 
     public String mostrarProduto(){
-        return ("Quantidade: " + " Validade: " + " Preço: " + preco);
+        return (nome + "\nPreço: " + preco);
     }
 
 }

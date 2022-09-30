@@ -1,5 +1,5 @@
 package pedidos;
-import cardap.Produto;
+import cardapio.Produto;
 
 public class Item {
 

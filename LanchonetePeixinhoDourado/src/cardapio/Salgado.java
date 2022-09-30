@@ -1,4 +1,4 @@
-package cardap;
+package cardapio;
 
 public class Salgado extends Produto{
     

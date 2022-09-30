@@ -1,6 +1,6 @@
 package pedidos;
 import java.util.ArrayList;
-import cardap.Produto;
+import cardapio.Produto;
 
 public class Pedido {
 
@@ -12,13 +12,13 @@ public class Pedido {
     public Pedido(String cliente, FormaDePagamento formaDePagamento){
         this.cliente = cliente;
         this.formaDePagamento = formaDePagamento;
-        this.regraDeNegocio01();
+        this.regraDeNegocio03();
     }
 
-    public void regraDeNegocio01(){
+    public void regraDeNegocio03(){
         //Se o pagamento for em debito ou em credito, sera acrescentado uma taxa de 1 real.
         if (this.formaDePagamento == formaDePagamento.credito || this.formaDePagamento == formaDePagamento.debito){
-        this.valor+=1;
+            this.valor+=1;
         }
     }
     public ArrayList<Item> getProdutos() {
@@ -64,6 +64,7 @@ public class Pedido {
     
     public void removeItem (Item item){
         this.itens.remove(item);
+        this.valor = this.valor - item.getPreco();
     }
 
     public double calcularPedido(Item produto){
@@ -77,7 +78,14 @@ public class Pedido {
         }
     }
     
-    
+    public void finalizarPedido(){
+        // Regra de negocio 01
+        if (this.valor >= 150){
+            this.valor = this.valor*0.90;
+        }
+        this.mostrarPedido();
+        System.out.println(this.valorTotal());
+    }
 
     
 }

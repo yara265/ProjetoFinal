@@ -1,5 +1,6 @@
 package lanchonetepeixinhodourado;
-import cardap.*;
+import cardapio.Pizza;
+import cardapio.Refrigerante;
 import pedidos.*;
 
 public class LanchonetePeixinhoDourado {
@@ -15,9 +16,11 @@ public class LanchonetePeixinhoDourado {
         Pedido ped = new Pedido("Kirk", FormaDePagamento.credito);
         ped.addItem(i1);
         ped.addItem(i2);
-        System.out.println(ped.valorTotal());
-        ped.mostrarPedido();
         ped.removeItem(i2);
+        ped.addItem(i1);
+        ped.addItem(i1);
+        ped.addItem(i1);
+        ped.finalizarPedido();
     }   
     
 }

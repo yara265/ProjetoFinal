@@ -1,4 +1,4 @@
-package cardap;
+package cardapio;
 
 public class Pizza extends Produto{
     
@@ -18,8 +18,9 @@ public class Pizza extends Produto{
 
     public void setBorda(boolean borda) {
         this.borda = borda;
-    }
-
+    }        
+        
+    
     @Override
     public String mostrarProduto(){
         return ("Produto: " + nome + " de " + recheio + "\nPreço R$" + preco);
