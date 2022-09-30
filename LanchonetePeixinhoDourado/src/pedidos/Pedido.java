@@ -63,7 +63,6 @@ public class Pedido {
     
     public void addItem(Item item){
         this.itens.add(item);
-        this.calcularPedido(item);
     }
     
     public void removeItem (Item item){
@@ -71,8 +70,10 @@ public class Pedido {
         this.valor = this.valor - item.getPreco();
     }
 
-    public double calcularPedido(Item produto){
-        this.valor = this.valor + produto.getPreco();
+    public double calcularPedido(){
+        for (Item i: this.itens){
+            this.valor += i.getPreco();
+        }
         return valor;
     }
     
@@ -97,8 +98,14 @@ public class Pedido {
     }
     
     public void finalizarPedido(){
-        Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.valorTotal(), this.valorPago());    
+        Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.calcularPedido(), this.valorPago());    
     }
-
+    
+    public void teste(){
+         for (Item i: this.itens){
+            System.out.println(i.getPreco());
+        }
+    }   
+    
     
 }
