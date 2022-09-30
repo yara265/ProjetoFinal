@@ -28,6 +28,6 @@ public class Vitamina extends Produto{
 
     @Override
     public String mostrarProduto(){
-        return ("Produto: " + nome + " de "+ "\nPreço R$" + preco);
+        return (nome + " de "+ sabor);
     }
 }

@@ -28,7 +28,7 @@ public class Sanduiche extends Produto{
     
     @Override
     public String mostrarProduto(){
-        return ("Produto: " + nome + " de " + recheio + " Tipo de pão " + tipoDoPao + "\nMolho " + molho);
+        return (nome + " de " + recheio);
     }
     
 }

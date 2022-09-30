@@ -26,6 +26,6 @@ public class Refrigerante extends Produto{
     
     @Override
     public String mostrarProduto(){
-        return ("Produto: " + nome + "\nMarca: " + marca +" "+ volume +"ml " + "\nPreço R$" + preco);
+        return (nome + " " + marca +" "+ volume +"ml ");
     }
 }

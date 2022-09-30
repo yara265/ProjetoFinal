@@ -23,7 +23,7 @@ public class Pizza extends Produto{
     
     @Override
     public String mostrarProduto(){
-        return ("Produto: " + nome + " de " + recheio + "\nPreço R$" + preco);
+        return (nome + " de " + recheio);
         //falta borda
     }
     
