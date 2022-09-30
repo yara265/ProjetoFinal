@@ -28,6 +28,10 @@ public class Item {
         return this.produto.getPreco();
     }
     
+    public int getQuantidade(){
+        return this.quantidade;
+    }
+    
     public String mostrar(){
         return this.produto.mostrarProduto();
     }

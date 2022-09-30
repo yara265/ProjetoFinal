@@ -1,6 +1,7 @@
 package pedidos;
 import java.util.ArrayList;
 import cardapio.Produto;
+import java.util.Scanner;
 
 public class Pedido {
 
@@ -8,11 +9,14 @@ public class Pedido {
     public String cliente;
     public double valor;
     public FormaDePagamento formaDePagamento;
+    public double valorPago;
+    Scanner pago = new Scanner(System.in);
     
     public Pedido(String cliente, FormaDePagamento formaDePagamento){
         this.cliente = cliente;
         this.formaDePagamento = formaDePagamento;
         this.regraDeNegocio03();
+                
     }
 
     public void regraDeNegocio03(){
@@ -53,8 +57,8 @@ public class Pedido {
         this.formaDePagamento = formaDePagamento;
     }
     
-    public String valorTotal(){
-        return "O valor total do pedido eh de: " + this.valor;
+    public double valorTotal(){
+        return this.valor;
     }
     
     public void addItem(Item item){
@@ -72,19 +76,28 @@ public class Pedido {
         return valor;
     }
     
+    public double valorPago(){
+        if (this.formaDePagamento == FormaDePagamento.credito 
+            || this.formaDePagamento == FormaDePagamento.debito 
+            || this.formaDePagamento == FormaDePagamento.pix){
+                return this.valorTotal();
+        }
+        
+        else{
+            System.out.println("O valor pago foi de: ");
+            double valorPago = pago.nextDouble();
+            return valorPago;
+        }
+    }
+    
     public void mostrarPedido(){
         for (Item i: this.itens){
-            System.out.println(i.mostrar());
+            System.out.println(i.getQuantidade()+ "    " + i.mostrar() + "      R$" + i.getPreco());
         }
     }
     
     public void finalizarPedido(){
-        // Regra de negocio 01
-        if (this.valor >= 150){
-            this.valor = this.valor*0.90;
-        }
-        this.mostrarPedido();
-        System.out.println(this.valorTotal());
+        Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.valorTotal(), this.valorPago());    
     }
 
     
