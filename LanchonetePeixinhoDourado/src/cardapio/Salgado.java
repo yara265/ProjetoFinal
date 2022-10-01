@@ -22,7 +22,7 @@ public class Salgado extends Produto{
     
     @Override
     public String mostrarProduto(){
-        return (nome + " de " + sabor + tipo);
+        return (nome + " de " + sabor + " " + tipo);
     }
     
 }
