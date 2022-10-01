@@ -1,4 +1,5 @@
 package pedidos;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Venda {
@@ -9,6 +10,8 @@ public class Venda {
     public FormaDePagamento formaDePagamento;
     public double valorPago;
     public double troco;
+    DecimalFormat numberFormat = new DecimalFormat("#.00");
+
     
     public Venda(String cliente, ArrayList<Item> itens,FormaDePagamento formaDePagamento, double valorTotal, double valorPago){
         this.cliente = cliente;
@@ -55,10 +58,10 @@ public class Venda {
         this.mostrarPedido();
         this.regraDeNegocio01();
         System.out.println(this.valorTotal);
-        System.out.println("Forma de pagamento: " + this.formaDePagamento);
-        System.out.println("Total:                    R$" + this.valorTotal);
-        System.out.println("Valor Pago:               R$" + this.valorPago(this.valorPago));
-        System.out.println("Troco:                    R$" + troco());
+        System.out.println("Forma de pagamento: " +  this.formaDePagamento);
+        System.out.println("Total:                    R$" + numberFormat.format(this.valorTotal));
+        System.out.println("Valor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago)));
+        System.out.println("Troco:                    R$" + numberFormat.format(troco()));
     }
 }   
 
