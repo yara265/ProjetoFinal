@@ -11,17 +11,17 @@ public class Item {
         this.quantidade = 1;
     }
     
-    public int addQuantidade(){
+    public void addQuantidade(){
         this.quantidade+=1;
-        return quantidade;
     }
     
-    public int removeQuantidade(){
+    public void removeQuantidade(){
         if (this.quantidade > 0){
             this.quantidade-=1;
-            return quantidade;
         }
-        return 0;
+        else{
+            
+        }
     }
 
     double getPreco() {

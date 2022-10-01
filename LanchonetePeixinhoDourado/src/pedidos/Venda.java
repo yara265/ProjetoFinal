@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Venda {
 
     public ArrayList<Item> itens = new ArrayList<Item>();
+    public ArrayList<Item> vendas = new ArrayList<Item>();
     public String cliente;
     public double valorTotal;
     public FormaDePagamento formaDePagamento;
@@ -19,12 +20,24 @@ public class Venda {
         this.formaDePagamento = formaDePagamento;
         this.valorTotal = valorTotal;
         this.valorPago = valorPago;
+        this.addVendas();
         this.finalizarPedido();
     }
 
-    public void mostrarPedido(){
+    public void addVendas(){
         for (Item i: this.itens){
-            System.out.println(i.getQuantidade()+ "    " + i.mostrar() + "      R$" + i.getPreco());
+            if (vendas.contains(i)){
+                i.addQuantidade();
+        }
+            else{
+                vendas.add(i);
+                   }
+        }
+    }
+    
+    public void mostrarPedido(){
+        for (Item i: this.vendas){
+            System.out.println(i.getQuantidade()+ "    " + i.mostrar() + "      R$" + numberFormat.format(i.getPreco()));
         }
     }
     
@@ -57,7 +70,7 @@ public class Venda {
         System.out.println("------------------------------------");
         this.mostrarPedido();
         this.regraDeNegocio01();
-        System.out.println(this.valorTotal);
+        //System.out.println(this.valorTotal);
         System.out.println("Forma de pagamento: " +  this.formaDePagamento);
         System.out.println("Total:                    R$" + numberFormat.format(this.valorTotal));
         System.out.println("Valor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago)));
