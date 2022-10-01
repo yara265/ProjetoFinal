@@ -1,8 +1,19 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package lanchonetepeixinhodourado;
 
-public class Tela_Inicial extends javax.swing.JFrame {
+/**
+ *
+ * @author Pantoja
+ */
+public class FazerPedido extends javax.swing.JFrame {
 
-    public Tela_Inicial() {
+    /**
+     * Creates new form FazerPedido
+     */
+    public FazerPedido() {
         initComponents();
     }
 
@@ -18,69 +29,59 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
-        setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
-        setSize(new java.awt.Dimension(673, 422));
+        setMaximumSize(new java.awt.Dimension(674, 422));
+        setMinimumSize(new java.awt.Dimension(674, 422));
+        setPreferredSize(new java.awt.Dimension(674, 422));
         getContentPane().setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
-        jButton1.setText("CONTROLAR VENDAS");
-        jButton1.setPreferredSize(new java.awt.Dimension(166, 53));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jButton1.setText("FAZER PEDIDO");
         getContentPane().add(jButton1);
-        jButton1.setBounds(192, 313, 290, 70);
+        jButton1.setBounds(364, 352, 289, 62);
 
-        jButton2.setBackground(new java.awt.Color(255, 205, 176));
-        jButton2.setText("CARDÁPIO");
-        jButton2.setPreferredSize(new java.awt.Dimension(166, 53));
+        jButton2.setPreferredSize(new java.awt.Dimension(83, 61));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(190, 120, 290, 70);
-
-        jButton3.setBackground(new java.awt.Color(255, 205, 176));
-        jButton3.setText("FAZER PEDIDO");
-        jButton3.setPreferredSize(new java.awt.Dimension(166, 53));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        jButton2.setBounds(34, 268, 83, 61);
         getContentPane().add(jButton3);
-        jButton3.setBounds(192, 220, 290, 70);
+        jButton3.setBounds(164, 268, 83, 61);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(294, 270, 83, 61);
+        getContentPane().add(jButton5);
+        jButton5.setBounds(425, 270, 83, 61);
+        getContentPane().add(jButton6);
+        jButton6.setBounds(556, 270, 83, 61);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonetepeixinhodourado/TelaInicial_1.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(673, 500));
-        jLabel2.setMinimumSize(new java.awt.Dimension(673, 500));
-        jLabel2.setPreferredSize(new java.awt.Dimension(673, 500));
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 673, 422);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Forma de Pagamento" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(50, 150, 570, 40);
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(150, 90, 470, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonetepeixinhodourado/(1)Fazer_Pedido.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 673, 422);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,20 +100,20 @@ public class Tela_Inicial extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tela_Inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tela_Inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tela_Inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tela_Inicial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Tela_Inicial().setVisible(true);
+                new FazerPedido().setVisible(true);
             }
         });
     }
@@ -121,6 +122,11 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

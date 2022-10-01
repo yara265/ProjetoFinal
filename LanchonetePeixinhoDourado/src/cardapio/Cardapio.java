@@ -1,4 +1,4 @@
-package cardap;
+package cardapio;
 import java.util.ArrayList;
 
 public class Cardapio {
