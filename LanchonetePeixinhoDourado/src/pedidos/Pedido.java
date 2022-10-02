@@ -1,6 +1,6 @@
 package pedidos;
 import java.util.ArrayList;
-import cardapio.Produto;
+//import cardapio.Produto;
 import java.util.Scanner;
 
 public class Pedido {
@@ -93,7 +93,7 @@ public class Pedido {
     
     public void mostrarPedido(){
         for (Item i: this.itens){
-            System.out.println(i.getQuantidade()+ "    " + i.mostrar() + "      R$" + i.getPreco());
+            System.out.println(i.getQuantidade()+ "    " + i.mostrar());
         }
     }
     

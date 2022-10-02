@@ -2,7 +2,6 @@ package cardapio;
 
 public class Refrigerante extends Produto{
     
-    public String nome = "Refrigerante";
     public String marca;
     public double volume;
     
@@ -26,6 +25,7 @@ public class Refrigerante extends Produto{
     
     @Override
     public String mostrarProduto(){
-        return (nome + " " + marca +" "+ volume +"ml ");
+        System.out.println("----------Produto-----------");
+        return (nome + "\nMarca: " + marca +" \nVolume: "+ volume +"ml " + "\nValor:R$" + preco);
     }
 }

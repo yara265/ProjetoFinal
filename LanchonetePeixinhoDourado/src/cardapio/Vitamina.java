@@ -2,24 +2,23 @@ package cardapio;
 
 public class Vitamina extends Produto{
     
-    public String nome = "Vitamina";
-    public String sabor;
+    public Disponivel fruta;
     public boolean acucar;
     public double volume;
     
-    public Vitamina(double preco, String sabor, boolean acucar, double volume) {
+    public Vitamina(double preco, Disponivel fruta, boolean acucar, double volume) {
         super(preco, "Vitamina");
-        this.sabor = sabor;
-        this.acucar = acucar;
+        this.fruta = fruta;
+        this.acucar = false;
         this.volume = volume;
     }
 
-    public void setSabor(String sabor) {
-        this.sabor = sabor;
+    public void setSabor(Disponivel fruta) {
+        this.fruta = fruta;
     }
 
     public void setAcucar(boolean acucar) {
-        this.acucar = acucar;
+        this.acucar = true;
     }
 
     public void setVolume(double volume) {
@@ -28,6 +27,7 @@ public class Vitamina extends Produto{
 
     @Override
     public String mostrarProduto(){
-        return (nome + " de "+ sabor);
+        System.out.println("----------Produto-----------");
+        return (nome + " de "+ fruta + "\nVolume: " + volume +"ml " + "\nValor:R$" + preco);
     }
 }
