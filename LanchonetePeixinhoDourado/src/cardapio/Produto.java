@@ -20,7 +20,7 @@ public class Produto {
     }
 
     public String mostrarProduto(){
-        return (nome);
+        return (nome + "......................" + preco);
     }
 
 }
