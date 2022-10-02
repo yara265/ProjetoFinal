@@ -1,23 +1,27 @@
-package cardapio;
+package cardap;
+import cardapio.Produto;
+import cardapio.Disponivel;
 import java.util.ArrayList;
 
 public class Cardapio {
-    
-    ArrayList<Produto> comidaCardapio = new ArrayList<Produto>();
+    ArrayList<cardapio.Produto> cardComida = new ArrayList<cardapio.Produto>();
 
-    public void addProduto(Produto produto){
-        for(int i = 0; i < comidaCardapio.size(); i++){
-            comidaCardapio.add(produto);
-        }
+    public Cardapio(){
+        
+    }
+
+    public void addProduto(Produto comida){
+        cardComida.add(comida);
     }
 
     public void mostrarCardapio(){
-        for(Produto comida: comidaCardapio){
-            System.out.println(comida.mostrarProduto());
-            // Produto.........Preco
-            // tipos
+        System.out.println("----------------Cardápio----------------");
+        for(int i = 0; i < cardComida.size(); i++){
+            System.out.println(cardComida.get(i).mostrarProduto());
         }
+        Disponivel.mostrarFrutasDisponiveis();
+        Disponivel.mostrarMolhoDisponiveis();
+        Disponivel.mostrarPaesDisponiveis();
+        Disponivel.mostrarRecheioDisponiveis();
     }
-
-
 }
