@@ -3,6 +3,7 @@ import cardapio.*;
 import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
+import cardap.Cardapio;
 
 public class LanchonetePeixinhoDourado {
 
@@ -21,10 +22,10 @@ public class LanchonetePeixinhoDourado {
         Disponivel presunto = new Disponivel("Presunto", "Recheio");
 
         //metodo para mostrar os ingredientes disponiveis
-        Disponivel.mostrarFrutasDisponiveis();
-        Disponivel.mostrarMolhoDisponiveis();
-        Disponivel.mostrarPaesDisponiveis();
-        Disponivel.mostrarRecheioDisponiveis();
+        //Disponivel.mostrarFrutasDisponiveis();
+        //Disponivel.mostrarMolhoDisponiveis();
+        //Disponivel.mostrarPaesDisponiveis();
+        //Disponivel.mostrarRecheioDisponiveis();
         System.out.println("-----------------------------------------------------------------------------------------------");
         //instanciando produtos
         Pizza pizza = new Pizza(33, "Portuguesa", false);
@@ -33,23 +34,12 @@ public class LanchonetePeixinhoDourado {
         Vitamina vitamina = new Vitamina(11, morango, false, 500);
         Sanduiche sanduiche = new Sanduiche(12, queijo, hamburger, maionese);
 
-        //Metodo Mostrar para mostrar o produto de forma individual
-        System.out.println(pizza.mostrarProduto()); 
-        System.out.println(refrigerante.mostrarProduto());
-        System.out.println(salgado.mostrarProduto());
-        System.out.println(vitamina.mostrarProduto());
-        System.out.println(sanduiche.mostrarProduto());
+        //Aqui é adicionado e mostrado o Produto
+        Cardapio cardapio = new Cardapio();
+        cardapio.addProduto(pizza);
+        cardapio.mostrarCardapio();
         System.out.println("-----------------------------------------------------------------------------------------------");
         
-        
-        ////Cardapio
-        //Cardapio cardapio = new Cardapio();
-        ////metodo de adicionar produtos ao cardapio
-        //cardapio.addProduto(pizza);
-        //cardapio.addProduto(refrigerante);
-        //cardapio.addProduto(salgado);
-        ////metodo de mostrar cardapio
-        //cardapio.mostrarCardapio();
         
         //cada produto é um item
         Item i1 = new Item(pizza);
@@ -67,8 +57,6 @@ public class LanchonetePeixinhoDourado {
         System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
         Pedido1.finalizarPedido();
-
-        
 
     }   
     
