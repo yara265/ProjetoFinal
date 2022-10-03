@@ -86,7 +86,6 @@ public class LanchonetePeixinhoDourado {
         ped.addItem(i4);
         ped.addItem(i5);
         ped.addItem(i5);
-        
         ped.finalizarPedido();
     }   
     
