@@ -74,6 +74,20 @@ public class LanchonetePeixinhoDourado {
         catch (IOException e){
             e.printStackTrace();
         }
+        Item i1 = new Item(p1);
+        Item i2 =new Item(r1);
+        Item i3 = new Item(s1);
+        Item i4 = new Item(san1);
+        Item i5 = new Item(vit2);
+        Pedido ped = new Pedido("Kirk", FormaDePagamento.credito);
+        ped.addItem(i1);
+        ped.addItem(i2);
+        ped.addItem(i3);
+        ped.addItem(i4);
+        ped.addItem(i5);
+        ped.addItem(i5);
+        
+        ped.finalizarPedido();
     }   
     
 }
