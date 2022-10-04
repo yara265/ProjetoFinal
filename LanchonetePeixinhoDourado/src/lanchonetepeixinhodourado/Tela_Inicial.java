@@ -18,7 +18,9 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(673, 422));
@@ -36,7 +38,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(192, 313, 290, 70);
+        jButton1.setBounds(190, 280, 290, 70);
 
         jButton2.setBackground(new java.awt.Color(255, 205, 176));
         jButton2.setText("CARDÁPIO");
@@ -47,7 +49,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(190, 120, 290, 70);
+        jButton2.setBounds(190, 80, 290, 70);
 
         jButton3.setBackground(new java.awt.Color(255, 205, 176));
         jButton3.setText("FAZER PEDIDO");
@@ -58,14 +60,24 @@ public class Tela_Inicial extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(192, 220, 290, 70);
+        jButton3.setBounds(190, 180, 290, 70);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonetepeixinhodourado/TelaInicial_1.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(673, 500));
-        jLabel2.setMinimumSize(new java.awt.Dimension(673, 500));
-        jLabel2.setPreferredSize(new java.awt.Dimension(673, 500));
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 673, 422);
+        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
+        jPanel1.setLayout(null);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 670, 400);
+
+        jMenuBar1.setBackground(new java.awt.Color(217, 225, 248));
+
+        jMenu1.setText("Disponíveis");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,7 +92,14 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        new FazerPedido().setVisible(true);
+        
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+        new Disponiveis().setVisible(true);
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +140,8 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

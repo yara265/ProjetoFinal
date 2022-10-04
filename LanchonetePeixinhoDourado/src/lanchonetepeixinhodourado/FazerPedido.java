@@ -32,21 +32,28 @@ public class FazerPedido extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(0, 0, 673, 440));
         setMaximumSize(new java.awt.Dimension(674, 422));
         setMinimumSize(new java.awt.Dimension(674, 422));
         setPreferredSize(new java.awt.Dimension(674, 422));
+        setResizable(false);
+        setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("FAZER PEDIDO");
         getContentPane().add(jButton1);
-        jButton1.setBounds(364, 352, 289, 62);
+        jButton1.setBounds(360, 310, 289, 62);
 
+        jButton2.setText("Pizza");
         jButton2.setPreferredSize(new java.awt.Dimension(83, 61));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,34 +61,78 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(34, 268, 83, 61);
+        jButton2.setBounds(30, 230, 83, 61);
+
+        jButton3.setText("Lanche");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
-        jButton3.setBounds(164, 268, 83, 61);
+        jButton3.setBounds(160, 230, 83, 61);
+
+        jButton4.setText("Salgado");
         getContentPane().add(jButton4);
-        jButton4.setBounds(294, 270, 83, 61);
+        jButton4.setBounds(290, 230, 83, 61);
+
+        jButton5.setText("Vitamina");
         getContentPane().add(jButton5);
-        jButton5.setBounds(425, 270, 83, 61);
+        jButton5.setBounds(420, 230, 83, 61);
+
+        jButton6.setText("Refri");
         getContentPane().add(jButton6);
-        jButton6.setBounds(556, 270, 83, 61);
+        jButton6.setBounds(550, 230, 83, 61);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Forma de Pagamento" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(50, 150, 570, 40);
-
-        jTextField1.setText("jTextField1");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(150, 90, 470, 40);
+        jTextField1.setBounds(40, 50, 570, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lanchonetepeixinhodourado/(1)Fazer_Pedido.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 673, 422);
+        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
+        jPanel1.setForeground(new java.awt.Color(217, 225, 248));
+        jPanel1.setLayout(null);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setText("Forma de Pagamento:");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(40, 110, 190, 20);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Nome:");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(40, 10, 60, 40);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dinheiro", "Cartão", "Pix" }));
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(40, 140, 570, 40);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 680, 430);
+
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 37, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        new Pizza_FazerPedido().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new Sanduiche_FazerPedido().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +178,9 @@ public class FazerPedido extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
