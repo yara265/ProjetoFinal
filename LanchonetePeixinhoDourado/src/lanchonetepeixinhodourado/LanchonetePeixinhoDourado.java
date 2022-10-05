@@ -3,7 +3,7 @@ import cardapio.*;
 import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
-import cardap.Cardapio;
+import cardapio.Cardapio;
 
 public class LanchonetePeixinhoDourado {
 
