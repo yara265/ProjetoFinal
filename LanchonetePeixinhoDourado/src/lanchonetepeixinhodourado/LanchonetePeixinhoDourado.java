@@ -4,7 +4,10 @@ import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
 import cardapio.Cardapio;
-
+import java.io.FileOutputStream;
+import java.io.Serializable;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 public class LanchonetePeixinhoDourado {
 
     public static void main(String[] args) {
@@ -57,7 +60,20 @@ public class LanchonetePeixinhoDourado {
         System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
         Pedido1.finalizarPedido();
-
+        
+        //serializando
+        try {
+            FileOutputStream fout = new FileOutputStream ("venda.ser");
+            ObjectOutputStream oos = new ObjectOutputStream (fout);
+            
+            oos.writeObject(Pedido1.finalizarPedido());
+            
+            oos.close();
+            fout.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }   
     
 }

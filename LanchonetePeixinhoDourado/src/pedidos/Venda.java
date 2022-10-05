@@ -1,8 +1,9 @@
 package pedidos;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Venda {
+public class Venda implements Serializable{
 
     public ArrayList<Item> itens = new ArrayList<Item>();
     public ArrayList<Item> vendas = new ArrayList<Item>();

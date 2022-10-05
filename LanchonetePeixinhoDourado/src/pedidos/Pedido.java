@@ -97,8 +97,9 @@ public class Pedido {
         }
     }
     
-    public void finalizarPedido(){
+    public Venda finalizarPedido(){
         Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.calcularPedido(), this.valorPago());    
+        return v;
     }
     
     public void teste(){
