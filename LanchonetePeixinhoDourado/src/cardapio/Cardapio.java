@@ -1,4 +1,4 @@
-package cardap;
+package cardapio;
 import cardapio.Produto;
 import cardapio.Disponivel;
 import java.util.ArrayList;
