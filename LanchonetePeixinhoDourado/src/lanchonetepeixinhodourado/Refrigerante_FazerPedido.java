@@ -8,12 +8,12 @@ package lanchonetepeixinhodourado;
  *
  * @author yaran
  */
-public class Salgado_FazerPedido extends javax.swing.JFrame {
+public class Refrigerante_FazerPedido extends javax.swing.JFrame {
 
     /**
-     * Creates new form Salgado_FazerPedido
+     * Creates new form Refrigerante_FazerPedido
      */
-    public Salgado_FazerPedido() {
+    public Refrigerante_FazerPedido() {
         initComponents();
     }
 
@@ -26,62 +26,57 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jSpinner4 = new javax.swing.JSpinner();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         jSpinner2 = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
+        setPreferredSize(new java.awt.Dimension(673, 422));
         setResizable(false);
-        setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Frito");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(59, 41, 47, 20);
-
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Assado");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(171, 41, 90, 20);
-        getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(60, 250, 60, 30);
-        getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(60, 180, 60, 30);
-        getContentPane().add(jSpinner3);
-        jSpinner3.setBounds(60, 110, 60, 30);
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "280 ml", "1000ml" }));
+        jComboBox2.setMaximumSize(new java.awt.Dimension(60, 60));
+        getContentPane().add(jComboBox2);
+        jComboBox2.setBounds(40, 60, 570, 40);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Coxinha de Frango");
+        jLabel1.setText("Volume:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 110, 115, 20);
+        jLabel1.setBounds(41, 27, 50, 20);
+        getContentPane().add(jSpinner1);
+        jSpinner1.setBounds(40, 200, 60, 30);
+        getContentPane().add(jSpinner2);
+        jSpinner2.setBounds(40, 260, 60, 30);
+        getContentPane().add(jSpinner3);
+        jSpinner3.setBounds(40, 140, 60, 30);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Jacaré");
+        jLabel2.setText("Coca-Cola zero");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 180, 37, 20);
+        jLabel2.setBounds(119, 146, 93, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Enrolado de salsicha");
+        jLabel3.setText("Pepsi");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 260, 123, 20);
+        jLabel3.setBounds(119, 202, 32, 20);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setText("Fanta Uva");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(119, 262, 62, 20);
+
+        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("Voltar");
@@ -90,8 +85,6 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(60, 310, 148, 35);
 
         jButton2.setBackground(new java.awt.Color(255, 205, 176));
         jButton2.setText("Adicionar");
@@ -100,31 +93,33 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(450, 310, 148, 35);
-
-        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(313, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 680, 430);
+        jPanel1.setBounds(0, 0, 670, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -152,37 +147,35 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Refrigerante_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Refrigerante_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Refrigerante_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Refrigerante_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Salgado_FazerPedido().setVisible(true);
+                new Refrigerante_FazerPedido().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
     // End of variables declaration//GEN-END:variables
 }
