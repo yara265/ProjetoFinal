@@ -28,12 +28,17 @@ public class Disponivel {
         
     public static void mostrarFrutasDisponiveis(){
         int i = 1;
-        System.out.println("----------Frutas Disponiveis----------");
+        System.out.println("Frutas: ");
         for (String frutas : fruta){
             System.out.printf("%d - %s\n", i, frutas);
             i++;
         }
     }
+
+    public ArrayList<String>  verificarFrutasDisponiveis(){
+        return fruta;
+    }
+
     public static void mostrarPaesDisponiveis(){
         int i = 1;
         System.out.println("-----------Paes Disponiveis-----------");
@@ -54,7 +59,7 @@ public class Disponivel {
         int i = 1;
         System.out.println("---------Recheios Disponiveis---------");
         for (String recheios : recheio){
-            System.out.printf("%d - %s\n", i, recheios);
+             System.out.printf("%d - %s\n", i, recheios);
             i++;
         }
     }

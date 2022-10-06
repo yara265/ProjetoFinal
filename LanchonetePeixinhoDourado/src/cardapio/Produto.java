@@ -23,4 +23,7 @@ public class Produto {
         return (nome + "......................" + preco);
     }
 
+    public void mostrarProdutos(){
+        System.out.println(nome + "......................" + preco);
+    }
 }
