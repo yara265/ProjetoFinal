@@ -35,10 +35,10 @@ public class LanchonetePeixinhoDourado {
         //Disponivel.mostrarRecheioDisponiveis();
         System.out.println("-----------------------------------------------------------------------------------------------");
         //instanciando produtos
-        Pizza pizza = new Pizza(33, "Portuguesa", false);
+        Pizza pizza = new Pizza("Portuguesa", false);
         Refrigerante refrigerante = new Refrigerante(8, "Fanta Uva", 1000);
         Salgado salgado = new Salgado(5, "Salsicha", "Frito");
-        Vitamina vitamina = new Vitamina(11, morango, false, 500);
+        Vitamina vitamina = new Vitamina(morango, false, 500);
         Sanduiche sanduiche = new Sanduiche(12, queijo, hamburger, maionese);
 
         //Aqui é adicionado e mostrado o Produto
