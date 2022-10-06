@@ -1,7 +1,9 @@
 package cardapio;
 
+import java.io.Serializable;
 
-public class Produto {
+
+public class Produto implements Serializable{
 
     public double preco;
     public String nome;

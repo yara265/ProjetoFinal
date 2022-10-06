@@ -4,10 +4,14 @@ import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
 import cardapio.Cardapio;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.Serializable;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import pedidos.Venda;
+import java.io.EOFException;
 public class LanchonetePeixinhoDourado {
 
     public static void main(String[] args) {
@@ -59,14 +63,14 @@ public class LanchonetePeixinhoDourado {
         Pedido1.mostrarPedido();
         System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
-        Pedido1.finalizarPedido();
+        Venda v1 = Pedido1.finalizarPedido();
         
         //serializando
         try {
             FileOutputStream fout = new FileOutputStream ("venda.ser");
             ObjectOutputStream oos = new ObjectOutputStream (fout);
             
-            oos.writeObject(Pedido1.finalizarPedido());
+           oos.writeObject(v1);
             
             oos.close();
             fout.close();
@@ -75,6 +79,19 @@ public class LanchonetePeixinhoDourado {
             e.printStackTrace();
         }
 
+        try {         
+            FileInputStream fin = new FileInputStream("venda.ser");
+            ObjectInputStream ois = new ObjectInputStream(fin);
+            
+            v1 = (Venda) ois.readObject();
+            
+            ois.close();
+            fin.close();
+            System.out.println();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }   
     
 }

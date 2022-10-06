@@ -1,8 +1,9 @@
 package cardapio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Disponivel {
+public class Disponivel implements Serializable{
     String nome;
     String tipo;
 
