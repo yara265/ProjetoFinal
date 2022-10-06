@@ -1,7 +1,8 @@
 package pedidos;
 import cardapio.Produto;
+import java.io.Serializable;
 
-public class Item {
+public class Item implements Serializable{
 
     public Produto produto;
     public int quantidade;
