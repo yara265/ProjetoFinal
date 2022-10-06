@@ -1,17 +1,12 @@
 package lanchonetepeixinhodourado;
+import java.util.ArrayList;
+
 import cardapio.*;
 import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
-import cardapio.Cardapio;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.Serializable;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import pedidos.Serializacao;
 import pedidos.Venda;
-import java.io.EOFException;
 public class LanchonetePeixinhoDourado {
 
     public static void main(String[] args) {
@@ -33,7 +28,7 @@ public class LanchonetePeixinhoDourado {
         //Disponivel.mostrarMolhoDisponiveis();
         //Disponivel.mostrarPaesDisponiveis();
         //Disponivel.mostrarRecheioDisponiveis();
-        System.out.println("-----------------------------------------------------------------------------------------------");
+        // System.out.println("-----------------------------------------------------------------------------------------------");
         //instanciando produtos
         Pizza pizza = new Pizza("Portuguesa", false);
         Refrigerante refrigerante = new Refrigerante(8, "Fanta Uva", 1000);
@@ -42,10 +37,10 @@ public class LanchonetePeixinhoDourado {
         Sanduiche sanduiche = new Sanduiche(12, queijo, hamburger, maionese);
 
         //Aqui é adicionado e mostrado o Produto
-        Cardapio cardapio = new Cardapio();
-        cardapio.addProduto(pizza);
-        cardapio.mostrarCardapio();
-        System.out.println("-----------------------------------------------------------------------------------------------");
+        // Cardapio cardapio = new Cardapio();
+        // cardapio.addProduto(pizza);
+        // cardapio.mostrarCardapio();
+        // System.out.println("-----------------------------------------------------------------------------------------------");
         
         
         //cada produto é um item
@@ -60,38 +55,17 @@ public class LanchonetePeixinhoDourado {
         Pedido1.addItem(i4);
         Pedido1.addItem(i2);
         //metodo de mostrar o pedido
-        Pedido1.mostrarPedido();
-        System.out.println("-----------------------------------------------------------------------------------------------");
+        // Pedido1.mostrarPedido();
+        // System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
-        Venda v1 = Pedido1.finalizarPedido();
+        // Venda v1 = Pedido1.finalizarPedido();
+        // Serializacao.writeFile(v1);
         
-        //serializando
-        try {
-            FileOutputStream fout = new FileOutputStream ("venda.ser");
-            ObjectOutputStream oos = new ObjectOutputStream (fout);
-            
-           oos.writeObject(v1);
-            
-            oos.close();
-            fout.close();
+        ArrayList<Venda> vendas = Serializacao.readFile();
+        for (Venda venda : vendas) {
+            System.out.println(venda);
         }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-
-        try {         
-            FileInputStream fin = new FileInputStream("venda.ser");
-            ObjectInputStream ois = new ObjectInputStream(fin);
-            
-            v1 = (Venda) ois.readObject();
-            
-            ois.close();
-            fin.close();
-            System.out.println();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }   
+        
     
+    }
 }

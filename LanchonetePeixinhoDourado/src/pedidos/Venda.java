@@ -77,5 +77,18 @@ public class Venda implements Serializable{
         System.out.println("Valor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago)));
         System.out.println("Troco:                    R$" + numberFormat.format(troco()));
     }
+
+    @Override
+    public String toString() {
+        return ("Cliente: "+ 
+        cliente +"\n------------------------------------"+
+        "\nQntd    Produtos        Preco"+
+        "\n------------------------------------"+
+        "\nForma de Pagamento: "+ formaDePagamento+
+        "\nTotal:                    R$" + numberFormat.format(this.valorTotal)+
+        "\nValor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago))+
+        "\nTroco:                    R$" + numberFormat.format(troco()));
+    }
+    
 }   
 
