@@ -42,7 +42,7 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "280 ml", "1000ml" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "200 ml", "500 ml", "800 ml" }));
         jComboBox1.setMaximumSize(new java.awt.Dimension(60, 60));
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(58, 146, 570, 40);

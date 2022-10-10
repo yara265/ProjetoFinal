@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lanchonetepeixinhodourado;
-
+import cardapio.Pizza;
+import pedidos.Item;
 /**
  *
  * @author yaran
@@ -26,13 +27,13 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
+        qtdPizzaCalabresa = new javax.swing.JSpinner();
+        qtdPizzaMussarela = new javax.swing.JSpinner();
+        qtdPizzaPortuguesa = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        booleanBorda = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -44,12 +45,12 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
-        getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(60, 60, 60, 30);
-        getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(60, 130, 60, 30);
-        getContentPane().add(jSpinner3);
-        jSpinner3.setBounds(60, 200, 60, 30);
+        getContentPane().add(qtdPizzaCalabresa);
+        qtdPizzaCalabresa.setBounds(60, 60, 60, 30);
+        getContentPane().add(qtdPizzaMussarela);
+        qtdPizzaMussarela.setBounds(60, 130, 60, 30);
+        getContentPane().add(qtdPizzaPortuguesa);
+        qtdPizzaPortuguesa.setBounds(60, 200, 60, 30);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Pizza de Calabresa");
@@ -66,14 +67,14 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(160, 200, 130, 20);
 
-        jRadioButton1.setText("Borda");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        booleanBorda.setText("Borda");
+        booleanBorda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                booleanBordaActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(60, 270, 110, 20);
+        getContentPane().add(booleanBorda);
+        booleanBorda.setBounds(60, 270, 110, 20);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("Voltar");
@@ -114,9 +115,9 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void booleanBordaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_booleanBordaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_booleanBordaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -125,6 +126,21 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        int qtdPizzaCal = Integer.parseInt(qtdPizzaCalabresa.getValue().toString());
+        
+        if (qtdPizzaCal>=1){
+            if (booleanBorda.isSelected()){
+            Pizza pizzaCal= new Pizza("calabresa",true); 
+            Item pizzacal=new Item(pizzaCal);
+            
+            }
+            else{
+                Pizza pizzaCal= new Pizza("calabresa",false); 
+                Item pizzacal=new Item(pizzaCal);
+            }
+        }
+       
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -164,15 +180,15 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton booleanBorda;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner qtdPizzaCalabresa;
+    private javax.swing.JSpinner qtdPizzaMussarela;
+    private javax.swing.JSpinner qtdPizzaPortuguesa;
     // End of variables declaration//GEN-END:variables
 }

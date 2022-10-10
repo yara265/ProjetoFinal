@@ -10,7 +10,7 @@ import pedidos.Venda;
 public class LanchonetePeixinhoDourado {
 
     public static void main(String[] args) {
-        
+          
         //Atividade 4 - classes
         //instanciando ingrediente disponiveis
         Disponivel banana = new Disponivel("Banana", "Fruta");

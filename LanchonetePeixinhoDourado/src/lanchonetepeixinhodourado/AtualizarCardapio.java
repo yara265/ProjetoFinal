@@ -3,19 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lanchonetepeixinhodourado;
-import pedidos.FormaDePagamento;
-import pedidos.Pedido;
-import lanchonetepeixinhodourado.Pizza_FazerPedido;
+
 /**
  *
- * @author Pantoja
+ * @author yaran
  */
-public class FazerPedido extends javax.swing.JFrame {
+public class AtualizarCardapio extends javax.swing.JFrame {
 
     /**
-     * Creates new form FazerPedido
+     * Creates new form AtualizarCardapio
      */
-    public FazerPedido() {
+    public AtualizarCardapio() {
         initComponents();
     }
 
@@ -33,22 +31,14 @@ public class FazerPedido extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        nomeCliente = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        formaPag = new javax.swing.JComboBox<>();
-        btnfazerPedido = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 673, 440));
-        setMaximumSize(new java.awt.Dimension(674, 422));
-        setMinimumSize(new java.awt.Dimension(674, 422));
-        setPreferredSize(new java.awt.Dimension(674, 422));
-        setResizable(false);
-        setSize(new java.awt.Dimension(673, 422));
+        setMaximumSize(new java.awt.Dimension(673, 422));
+        setMinimumSize(new java.awt.Dimension(673, 422));
+        setPreferredSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jButton2.setText("Pizza");
@@ -59,7 +49,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(30, 230, 83, 61);
+        jButton2.setBounds(30, 120, 83, 61);
 
         jButton3.setText("Lanche");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +58,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(160, 230, 83, 61);
+        jButton3.setBounds(160, 120, 83, 61);
 
         jButton4.setText("Salgado");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +67,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(290, 230, 83, 61);
+        jButton4.setBounds(290, 120, 83, 61);
 
         jButton5.setText("Vitamina");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +76,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(420, 230, 83, 61);
+        jButton5.setBounds(420, 120, 83, 61);
 
         jButton6.setText("Refri");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -95,122 +85,61 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(550, 230, 83, 61);
+        jButton6.setBounds(550, 120, 83, 61);
 
-        nomeCliente.addActionListener(new java.awt.event.ActionListener() {
+        jButton7.setBackground(new java.awt.Color(255, 205, 176));
+        jButton7.setText("Voltar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeClienteActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(nomeCliente);
-        nomeCliente.setBounds(40, 50, 570, 40);
+        getContentPane().add(jButton7);
+        jButton7.setBounds(30, 300, 148, 35);
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
-        jPanel1.setForeground(new java.awt.Color(217, 225, 248));
         jPanel1.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Forma de Pagamento:");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 110, 190, 20);
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Nome:");
+        jLabel1.setText("Escolha a categoria desejada para atualizar:");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(40, 10, 60, 40);
-
-        formaPag.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dinheiro", "Debito", "Credito", "Pix" }));
-        jPanel1.add(formaPag);
-        formaPag.setBounds(40, 140, 570, 40);
-
-        btnfazerPedido.setBackground(new java.awt.Color(255, 205, 176));
-        btnfazerPedido.setText("FAZER PEDIDO");
-        btnfazerPedido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnfazerPedidoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnfazerPedido);
-        btnfazerPedido.setBounds(360, 310, 270, 62);
-
-        jButton1.setBackground(new java.awt.Color(255, 205, 176));
-        jButton1.setText("VOLTAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(30, 310, 270, 62);
+        jLabel1.setBounds(30, 50, 400, 20);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 680, 430);
-
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 37, 16);
+        jPanel1.setBounds(0, 0, 690, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        new Pizza_FazerPedido().setVisible(true);
+        new Pizza_AtualizarCardapio().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void nomeClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeClienteActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new Sanduiche_FazerPedido().setVisible(true);
+        new Sanduiche_AtualizarCardapio().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new Salgado_FazerPedido().setVisible(true);
+        new Salgado_AtualizarCardapio().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        new Refrigerante_FazerPedido().setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        new Vitamina_FazerPedido().setVisible(true);
+        new Vitamina_AtualizarPedido().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        new Tela_Inicial().setVisible(true);
-        this.dispose();
+         new Refrigerante_AlterarCardapio().setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btnfazerPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfazerPedidoActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        String strNomeCliente = nomeCliente.getText();
-        String strFormaPag = (String)formaPag.getSelectedItem();
-        
-        if (strFormaPag=="Dinheiro"){
-            Pedido newPedido1 = new Pedido(strNomeCliente,FormaDePagamento.dinheiro);
-           
-        }
-        if (strFormaPag=="Debito"){
-            Pedido newPedido2 = new Pedido(strNomeCliente,FormaDePagamento.debito);
-        }
-        if (strFormaPag=="Credito"){
-            Pedido newPedido3 = new Pedido(strNomeCliente,FormaDePagamento.credito);
-        }
-        if (strFormaPag=="Pix"){
-            Pedido newPedido4 = new Pedido(strNomeCliente,FormaDePagamento.pix);
-        }
-        new FinalizarPedido().setVisible(true);
-        this.dispose();
-        
-    }//GEN-LAST:event_btnfazerPedidoActionPerformed
+        new Cardapio().setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,37 +158,32 @@ public class FazerPedido extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AtualizarCardapio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AtualizarCardapio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AtualizarCardapio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AtualizarCardapio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FazerPedido().setVisible(true);
+                new AtualizarCardapio().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnfazerPedido;
-    private javax.swing.JComboBox<String> formaPag;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nomeCliente;
     // End of variables declaration//GEN-END:variables
 }
