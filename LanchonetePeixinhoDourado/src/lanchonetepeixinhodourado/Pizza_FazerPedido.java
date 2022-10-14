@@ -5,6 +5,7 @@
 package lanchonetepeixinhodourado;
 import cardapio.Pizza;
 import pedidos.Item;
+import pedidos.Pedido;
 /**
  *
  * @author yaran
@@ -14,8 +15,11 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form F
      */
-    public Pizza_FazerPedido() {
+    Pedido pedidoteste;
+    
+    public Pizza_FazerPedido(Pedido pedidoteste) {
         initComponents();
+        this.pedidoteste = pedidoteste;
     }
 
     /**
@@ -30,18 +34,16 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         qtdPizzaCalabresa = new javax.swing.JSpinner();
         qtdPizzaMussarela = new javax.swing.JSpinner();
         qtdPizzaPortuguesa = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         booleanBorda = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         setResizable(false);
         setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
@@ -51,16 +53,6 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         qtdPizzaMussarela.setBounds(60, 130, 60, 30);
         getContentPane().add(qtdPizzaPortuguesa);
         qtdPizzaPortuguesa.setBounds(60, 200, 60, 30);
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Pizza de Calabresa");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 50, 130, 30);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Pizza de Mussarela");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 140, 140, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Pizza de Portuguesa");
@@ -98,15 +90,31 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Pizza de Calabresa");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Pizza de Mussarela");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(371, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jLabel2)
+                .addContainerGap(263, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -121,26 +129,59 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new FazerPedido().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         int qtdPizzaCal = Integer.parseInt(qtdPizzaCalabresa.getValue().toString());
-        
-        if (qtdPizzaCal>=1){
+        int qtdPizzaMuss = Integer.parseInt(qtdPizzaMussarela.getValue().toString());
+        int qtdPizzaPort = Integer.parseInt(qtdPizzaPortuguesa.getValue().toString());
+
+
+        while (qtdPizzaCal>0){
             if (booleanBorda.isSelected()){
-            Pizza pizzaCal= new Pizza("calabresa",true); 
-            Item pizzacal=new Item(pizzaCal);
-            
+                qtdPizzaCal = qtdPizzaCal - 1;
+                Pizza pizzaCal= new Pizza("calabresa",true); 
+                Item pizzacal = new Item(pizzaCal);
+                this.pedidoteste.addItem(pizzacal);
             }
             else{
+                qtdPizzaCal = qtdPizzaCal - 1;
                 Pizza pizzaCal= new Pizza("calabresa",false); 
-                Item pizzacal=new Item(pizzaCal);
+                Item pizzacal =new Item(pizzaCal);
+                this.pedidoteste.addItem(pizzacal);
             }
         }
-       
-        
+        while (qtdPizzaMuss>0){
+            if (booleanBorda.isSelected()){
+                qtdPizzaMuss = qtdPizzaMuss - 1;
+                Pizza PizzaMuss= new Pizza("Mussarela",true); 
+                Item Pizzamuss = new Item(PizzaMuss);
+                this.pedidoteste.addItem(Pizzamuss);
+            }
+            else{
+                qtdPizzaMuss = qtdPizzaMuss - 1;
+                Pizza PizzaMuss= new Pizza("Mussarela",false); 
+                Item Pizzamuss =new Item(PizzaMuss);
+                this.pedidoteste.addItem(Pizzamuss);
+            }   
+        }  
+        while (qtdPizzaPort>0){
+            if (booleanBorda.isSelected()){
+                qtdPizzaPort = qtdPizzaPort - 1;
+                Pizza PizzaPort= new Pizza("portuguesa",true); 
+                Item Pizzaport = new Item(PizzaPort);
+                this.pedidoteste.addItem(Pizzaport);
+            }
+            else{
+                qtdPizzaPort = qtdPizzaPort - 1;
+                Pizza PizzaPort= new Pizza("portuguesa",false); 
+                Item Pizzaport =new Item(PizzaPort);
+                this.pedidoteste.addItem(Pizzaport);
+            }
+        }
+       this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -174,7 +215,11 @@ public class Pizza_FazerPedido extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pizza_FazerPedido().setVisible(true);
+                this.setVisible(true);
+            }
+
+            private void setVisible(boolean b) {
+                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
         });
     }

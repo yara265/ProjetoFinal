@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JProgressBar" name="jProgressBar2">
+    </Component>
+    <Component class="javax.swing.JRadioButtonMenuItem" name="jRadioButtonMenuItem1">
+      <Properties>
+        <Property name="selected" type="boolean" value="true"/>
+        <Property name="text" type="java.lang.String" value="jRadioButtonMenuItem1"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JEditorPane" name="jEditorPane1">
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[673, 422]"/>
-    </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[673, 422]"/>
-    </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[673, 422]"/>
     </Property>
   </Properties>
@@ -66,52 +81,6 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="java.awt.ScrollPane" name="scrollPane1">
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="30" width="550" height="270"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.ScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel7">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel7"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel6"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel5"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel4"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel1"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -123,19 +92,88 @@
           <AbsoluteConstraints x="0" y="0" width="680" height="430"/>
         </Constraint>
       </Constraints>
+      <SubComponents>
+        <Container class="java.awt.ScrollPane" name="scrollPane1">
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="680" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.ScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel11">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel11"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel10"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel9"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel8"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jTextField2"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jTextField1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel7"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel6"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel1"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+        </Container>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>

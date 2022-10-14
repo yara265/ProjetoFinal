@@ -2,26 +2,26 @@ package cardapio;
 
 public class Sanduiche extends Produto{
 
-    public Disponivel recheio;
-    public Disponivel tipoDoPao;
-    public Disponivel molho;
+    public String recheio;
+    public String tipoDoPao;
+    public String molho;
     
-    public Sanduiche(double preco, Disponivel recheio, Disponivel tipoDoPao, Disponivel molho) {
-        super(preco, "Sanduiche");
+    public Sanduiche(String recheio, String tipoDoPao, String molho) {
+        super(10, "Sanduiche");
         this.recheio = recheio;
         this.tipoDoPao = tipoDoPao;
         this.molho = molho;
     }
 
-    public void setRecheio(Disponivel recheio) {
+    public void setRecheio(String recheio) {
         this.recheio = recheio;
     }
 
-    public void setTipoDoPao(Disponivel tipoDoPao) {
+    public void setTipoDoPao(String tipoDoPao) {
         this.tipoDoPao = tipoDoPao;
     }
 
-    public void setMolho(Disponivel molho) {
+    public void setMolho(String molho) {
         this.molho = molho;
     }
     

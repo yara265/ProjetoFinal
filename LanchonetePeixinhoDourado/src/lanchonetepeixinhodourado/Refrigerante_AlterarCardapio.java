@@ -4,6 +4,8 @@
  */
 package lanchonetepeixinhodourado;
 
+import pedidos.Pedido;
+
 /**
  *
  * @author yaran
@@ -13,8 +15,12 @@ public class Refrigerante_AlterarCardapio extends javax.swing.JFrame {
     /**
      * Creates new form Refrigerante_AlterarCardapio
      */
+    
+    Pedido pedidoteste;
+    
     public Refrigerante_AlterarCardapio() {
         initComponents();
+        
     }
 
     /**

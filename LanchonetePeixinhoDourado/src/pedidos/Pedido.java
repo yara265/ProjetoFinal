@@ -18,6 +18,12 @@ public class Pedido {
         this.regraDeNegocio03();
                 
     }
+    
+    public Pedido(){
+        this.cliente = null;
+        this.formaDePagamento = null;
+        this.regraDeNegocio03();    
+    }
 
     public void regraDeNegocio03(){
         //Se o pagamento for em debito ou em credito, sera acrescentado uma taxa de 1 real.

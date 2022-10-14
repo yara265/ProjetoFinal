@@ -4,6 +4,9 @@
  */
 package lanchonetepeixinhodourado;
 
+import cardapio.Salgado;
+import pedidos.Item;
+import pedidos.Pedido;
 /**
  *
  * @author yaran
@@ -13,10 +16,17 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form Salgado_FazerPedido
      */
-    public Salgado_FazerPedido() {
+    Pedido pedidoteste;
+    
+    public Salgado_FazerPedido(Pedido pedidoteste) {
         initComponents();
+        this.pedidoteste = pedidoteste;
     }
 
+    public Salgado_FazerPedido() {
+        initComponents();
+        this.pedidoteste = pedidoteste;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +39,6 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jSpinner4 = new javax.swing.JSpinner();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
         jSpinner1 = new javax.swing.JSpinner();
         jSpinner2 = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
@@ -39,9 +48,9 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
         setResizable(false);
         setSize(new java.awt.Dimension(673, 422));
@@ -51,16 +60,6 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
         jRadioButton1.setText("Frito");
         getContentPane().add(jRadioButton1);
         jRadioButton1.setBounds(59, 41, 47, 20);
-
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Assado");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(171, 41, 90, 20);
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(60, 250, 60, 30);
         getContentPane().add(jSpinner2);
@@ -71,17 +70,17 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Coxinha de Frango");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 110, 115, 20);
+        jLabel1.setBounds(160, 110, 170, 20);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Jacaré");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 180, 37, 20);
+        jLabel2.setBounds(160, 180, 110, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Enrolado de salsicha");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(160, 260, 123, 20);
+        jLabel3.setBounds(160, 260, 200, 20);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("Voltar");
@@ -105,15 +104,29 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("Assado");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(412, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jRadioButton2)
+                .addContainerGap(369, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -133,6 +146,59 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        int qntdSalsicha = Integer.parseInt(jSpinner1.getValue().toString());
+        int qntdJacare = Integer.parseInt(jSpinner2.getValue().toString());
+        int qntdCoxinhaDeFrango = Integer.parseInt(jSpinner3.getValue().toString());
+        
+        
+        while (qntdSalsicha >= 1){
+            qntdSalsicha = qntdSalsicha -1;
+            if (jRadioButton1.isSelected()){
+                qntdSalsicha = qntdSalsicha - 1;
+                Salgado salsichx = new Salgado("Enroladinho de Salsicha","Frito"); 
+                Item salsicha = new Item(salsichx);
+                this.pedidoteste.addItem(salsicha);        
+            }
+            if (jRadioButton2.isSelected()){
+                qntdSalsicha = qntdSalsicha - 1;
+                Salgado salsichx = new Salgado("Enroladinho de Salsicha","Assado"); 
+                Item salsicha = new Item(salsichx);
+                this.pedidoteste.addItem(salsicha);        
+            }        
+        }
+        
+        while (qntdJacare >= 1){
+            qntdJacare = qntdJacare - 1;
+            if (jRadioButton1.isSelected()){
+                qntdJacare = qntdJacare - 1;
+                Salgado jacarx = new Salgado("Jacare","Frito"); 
+                Item jacare = new Item(jacarx);
+                this.pedidoteste.addItem(jacare);        
+            }
+            if (jRadioButton2.isSelected()){
+                qntdJacare = qntdJacare - 1;
+                Salgado jacarx = new Salgado("Jacare","Assado"); 
+                Item jacare = new Item(jacarx);
+                this.pedidoteste.addItem(jacare);         
+            }        
+        }
+
+        while (qntdCoxinhaDeFrango >= 1){
+            qntdCoxinhaDeFrango = qntdCoxinhaDeFrango - 1;
+            if (jRadioButton1.isSelected()){
+                qntdCoxinhaDeFrango = qntdCoxinhaDeFrango - 1;
+                Salgado coxinhaDeFrango = new Salgado("Coxinha de frango","Frito"); 
+                Item coxinha = new Item(coxinhaDeFrango);
+                this.pedidoteste.addItem(coxinha);        
+            }
+            if (jRadioButton2.isSelected()){
+                qntdCoxinhaDeFrango = qntdCoxinhaDeFrango - 1;
+                Salgado coxinhaDeFrango = new Salgado("Coxinha de frango","Assado"); 
+                Item coxinha = new Item(coxinhaDeFrango);
+                this.pedidoteste.addItem(coxinha);            
+            }        
+        }
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

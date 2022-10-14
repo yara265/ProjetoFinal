@@ -1,5 +1,7 @@
 package lanchonetepeixinhodourado;
-
+import pedidos.FormaDePagamento;
+import pedidos.Pedido;
+import lanchonetepeixinhodourado.Pizza_FazerPedido;
 public class Tela_Inicial extends javax.swing.JFrame {
 
     public Tela_Inicial() {
@@ -23,9 +25,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
@@ -65,7 +65,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
         jPanel1.setLayout(null);
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 670, 400);
+        jPanel1.setBounds(0, 20, 670, 400);
 
         jMenuBar1.setBackground(new java.awt.Color(217, 225, 248));
 
@@ -90,13 +90,12 @@ public class Tela_Inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Cardapio().setVisible(true);
 
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new FazerPedido().setVisible(true);
-        
+        Pedido pedido = new Pedido();
+        new FazerPedido(pedido).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed

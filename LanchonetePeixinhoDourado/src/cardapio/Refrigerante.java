@@ -3,10 +3,10 @@ package cardapio;
 public class Refrigerante extends Produto{
     
     public String marca;
-    public double volume;
+    public String volume;
     
-    public Refrigerante( double preco, String marca, double volume) {
-        super(preco, "Refrigerante");
+    public Refrigerante(String marca, String volume) {
+        super(7.50, "Refrigerante");
         this.marca = marca;
         this.volume = volume;
     }
@@ -15,7 +15,7 @@ public class Refrigerante extends Produto{
         this.marca = sabor;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(String volume) {
         this.volume = volume;
     }
 

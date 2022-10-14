@@ -35,9 +35,7 @@ public class Pizza_AtualizarCardapio extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -51,7 +49,7 @@ public class Pizza_AtualizarCardapio extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Preço:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(42, 41, 37, 20);
+        jLabel1.setBounds(42, 41, 60, 20);
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +62,7 @@ public class Pizza_AtualizarCardapio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Recheio:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(42, 125, 50, 20);
+        jLabel2.setBounds(42, 125, 90, 20);
 
         jButton2.setBackground(new java.awt.Color(255, 205, 176));
         jButton2.setText("Adicionar");

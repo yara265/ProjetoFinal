@@ -22,7 +22,8 @@ public class Venda implements Serializable{
         this.valorTotal = valorTotal;
         this.valorPago = valorPago;
         this.addVendas();
-        this.finalizarPedido();
+        this.finalizarPedidoTeste();
+        //this.finalizarPedido();
     }
 
     public void addVendas(){
@@ -42,6 +43,14 @@ public class Venda implements Serializable{
         }
     }
     
+    public String mostrarPedidoTeste(){
+        String a = "";
+        for (Item i: this.vendas){
+            a = (i.getQuantidade()+ "    " + i.mostrar() + "      R$" + numberFormat.format(i.getPreco()));
+        }
+        return a;
+    }    
+
     public double valorPago(double valorPago){
           if (this.formaDePagamento == FormaDePagamento.credito 
             || this.formaDePagamento == FormaDePagamento.debito 
@@ -78,6 +87,22 @@ public class Venda implements Serializable{
         System.out.println("Troco:                    R$" + numberFormat.format(troco()));
     }
 
+        public String finalizarPedidoTeste(){
+            
+        return ("Cliente: "+this.cliente)+ "\n"+
+        ("------------------------------------")+"\n"+
+        // Regra de negocio 01
+        ("Qntd    Produtos        Preco")+"\n"+
+        ("------------------------------------")+"\n"+
+        this.mostrarPedidoTeste()+"\n"+
+        this.regraDeNegocio01()+"\n"+
+        //System.out.println(this.valorTotal);
+        ("Forma de pagamento: " +  this.formaDePagamento)+"\n"+
+        ("Total:                    R$" + numberFormat.format(this.valorTotal))+"\n"+
+        ("Valor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago)))+"\n"+
+        ("Troco:                    R$" + numberFormat.format(troco()));
+    }
+    
     @Override
     public String toString() {
         return ("Cliente: "+ 

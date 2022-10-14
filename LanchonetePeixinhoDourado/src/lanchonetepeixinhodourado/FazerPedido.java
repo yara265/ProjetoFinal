@@ -6,6 +6,7 @@ package lanchonetepeixinhodourado;
 import pedidos.FormaDePagamento;
 import pedidos.Pedido;
 import lanchonetepeixinhodourado.Pizza_FazerPedido;
+import pedidos.Venda;
 /**
  *
  * @author Pantoja
@@ -15,9 +16,17 @@ public class FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form FazerPedido
      */
-    public FazerPedido() {
-        initComponents();
+    
+    Pedido pedidoteste;
+    
+    public FazerPedido(Pedido pedidoteste) {
+    initComponents();
+    this.pedidoteste = pedidoteste;
     }
+
+    public FazerPedido(){
+    initComponents();
+    this.pedidoteste = pedidoteste;    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,9 +53,7 @@ public class FazerPedido extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 673, 440));
-        setMaximumSize(new java.awt.Dimension(674, 422));
         setMinimumSize(new java.awt.Dimension(674, 422));
-        setPreferredSize(new java.awt.Dimension(674, 422));
         setResizable(false);
         setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
@@ -148,14 +155,14 @@ public class FazerPedido extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 37, 16);
+        jLabel2.setBounds(0, 0, 38, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        new Pizza_FazerPedido().setVisible(true);
+        new Pizza_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void nomeClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeClienteActionPerformed
@@ -164,22 +171,22 @@ public class FazerPedido extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new Sanduiche_FazerPedido().setVisible(true);
+        new Sanduiche_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        new Salgado_FazerPedido().setVisible(true);
+        new Salgado_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        new Refrigerante_FazerPedido().setVisible(true);
+        new Refrigerante_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        new Vitamina_FazerPedido().setVisible(true);
+        new Vitamina_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -195,19 +202,24 @@ public class FazerPedido extends javax.swing.JFrame {
         String strFormaPag = (String)formaPag.getSelectedItem();
         
         if (strFormaPag=="Dinheiro"){
-            Pedido newPedido1 = new Pedido(strNomeCliente,FormaDePagamento.dinheiro);
-           
+            this.pedidoteste.cliente = strNomeCliente;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.dinheiro;
         }
         if (strFormaPag=="Debito"){
-            Pedido newPedido2 = new Pedido(strNomeCliente,FormaDePagamento.debito);
+            this.pedidoteste.cliente = strNomeCliente;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.debito;
         }
         if (strFormaPag=="Credito"){
-            Pedido newPedido3 = new Pedido(strNomeCliente,FormaDePagamento.credito);
+            this.pedidoteste.cliente = strNomeCliente;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.credito;
         }
         if (strFormaPag=="Pix"){
-            Pedido newPedido4 = new Pedido(strNomeCliente,FormaDePagamento.pix);
+            this.pedidoteste.cliente = strNomeCliente;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.pix;
         }
-        new FinalizarPedido().setVisible(true);
+        Venda venda = (this.pedidoteste.finalizarPedido());
+        new FinalizarPedido(venda, this.pedidoteste).setVisible(true);
+        System.out.println(this.pedidoteste.itens);
         this.dispose();
         
     }//GEN-LAST:event_btnfazerPedidoActionPerformed
@@ -229,13 +241,13 @@ public class FazerPedido extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Salgado_FazerPedido.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -262,4 +274,6 @@ public class FazerPedido extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nomeCliente;
     // End of variables declaration//GEN-END:variables
+
+
 }

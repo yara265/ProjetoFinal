@@ -39,7 +39,8 @@ public class Item implements Serializable{
     
     @Override
     public String toString() {
-        return "produto: " + this.produto.nome + ", quantidade: " + quantidade + "\n" + "--------------------------";
+        return this.produto.mostrarProduto();
+       // return "produto: " + this.produto.nome + "\n";
     }
 
     

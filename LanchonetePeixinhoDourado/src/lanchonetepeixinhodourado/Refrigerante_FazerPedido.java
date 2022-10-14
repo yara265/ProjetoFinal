@@ -4,6 +4,9 @@
  */
 package lanchonetepeixinhodourado;
 
+import cardapio.Refrigerante;
+import pedidos.Item;
+import pedidos.Pedido;
 /**
  *
  * @author yaran
@@ -13,9 +16,17 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form Refrigerante_FazerPedido
      */
-    public Refrigerante_FazerPedido() {
+    Pedido pedidoteste;
+    
+    public Refrigerante_FazerPedido(Pedido pedidoteste) {
         initComponents();
+        this.pedidoteste = pedidoteste;
     }
+
+    private Refrigerante_FazerPedido() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,21 +50,24 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "280 ml", "1000ml" }));
         jComboBox2.setMaximumSize(new java.awt.Dimension(60, 60));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(40, 60, 570, 40);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Volume:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(41, 27, 50, 20);
+        jLabel1.setBounds(41, 27, 110, 20);
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(40, 200, 60, 30);
         getContentPane().add(jSpinner2);
@@ -64,17 +78,17 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Coca-Cola zero");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(119, 146, 93, 20);
+        jLabel2.setBounds(119, 146, 140, 20);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Pepsi");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(119, 202, 32, 20);
+        jLabel3.setBounds(119, 202, 80, 20);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Fanta Uva");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(119, 262, 62, 20);
+        jLabel4.setBounds(119, 262, 80, 20);
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
@@ -116,7 +130,7 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 670, 420);
+        jPanel1.setBounds(0, 10, 670, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,7 +142,37 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        int qntdCoca = Integer.parseInt(jSpinner3.getValue().toString());
+        int qntdPepsi = Integer.parseInt(jSpinner1.getValue().toString());
+        int qntdFanta = Integer.parseInt(jSpinner2.getValue().toString());
+        String volume = (String) jComboBox2.getSelectedItem();
+   
+        while (qntdCoca > 0){
+            qntdCoca = qntdCoca - 1;
+            Refrigerante cocx = new Refrigerante("Coca-cola", volume);
+            Item coca = new Item(cocx);
+            this.pedidoteste.addItem(coca);
+        }
+        
+        while (qntdPepsi > 0){
+            qntdPepsi = qntdPepsi - 1;
+            Refrigerante pepsx = new Refrigerante("Coca-cola", volume);
+            Item pepsi = new Item(pepsx);
+            this.pedidoteste.addItem(pepsi);
+        }    
+        
+        while (qntdFanta > 0){
+            qntdFanta = qntdFanta - 1;
+            Refrigerante fantx = new Refrigerante("Coca-cola", volume);
+            Item fanta = new Item(fantx);
+            this.pedidoteste.addItem(fanta);
+        } 
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments

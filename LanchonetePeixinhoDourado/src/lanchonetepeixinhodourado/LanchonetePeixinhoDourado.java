@@ -31,10 +31,10 @@ public class LanchonetePeixinhoDourado {
         // System.out.println("-----------------------------------------------------------------------------------------------");
         //instanciando produtos
         Pizza pizza = new Pizza("Portuguesa", false);
-        Refrigerante refrigerante = new Refrigerante(8, "Fanta Uva", 1000);
-        Salgado salgado = new Salgado(5, "Salsicha", "Frito");
-        Vitamina vitamina = new Vitamina(morango, false, 500);
-        Sanduiche sanduiche = new Sanduiche(12, queijo, hamburger, maionese);
+        Refrigerante refrigerante = new Refrigerante("Fanta Uva", "1000");
+        Salgado salgado = new Salgado("Salsicha", "Frito");
+        Vitamina vitamina = new Vitamina("morango", false, "500");
+        Sanduiche sanduiche = new Sanduiche("queijo", "hamburger", "maionese");
 
         //Aqui é adicionado e mostrado o Produto
         // Cardapio cardapio = new Cardapio();
@@ -58,13 +58,14 @@ public class LanchonetePeixinhoDourado {
         // Pedido1.mostrarPedido();
         // System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
-        // Venda v1 = Pedido1.finalizarPedido();
-        // Serializacao.writeFile(v1);
+         Venda v1 = Pedido1.finalizarPedido();
+         //System.out.println(v1.finalizarPedidoTeste());
+         //Serializacao.writeFile(v1);
         
-        ArrayList<Venda> vendas = Serializacao.readFile();
-        for (Venda venda : vendas) {
-            System.out.println(venda);
-        }
+//        ArrayList<Venda> vendas = Serializacao.readFile();
+//        for (Venda venda : vendas) {
+//            System.out.println(venda);
+//        }
         
     
     }

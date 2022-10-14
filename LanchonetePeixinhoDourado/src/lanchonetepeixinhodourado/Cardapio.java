@@ -26,9 +26,21 @@ public class Cardapio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jProgressBar2 = new javax.swing.JProgressBar();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         scrollPane1 = new java.awt.ScrollPane();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        jProgressBar1 = new javax.swing.JProgressBar();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -36,12 +48,15 @@ public class Cardapio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
+
+        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
@@ -64,42 +79,52 @@ public class Cardapio extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(60, 310, 148, 35);
 
-        jLabel7.setText("jLabel7");
-        scrollPane1.add(jLabel7);
-
-        jLabel6.setText("jLabel6");
-        scrollPane1.add(jLabel6);
-
-        jLabel5.setText("jLabel5");
-        scrollPane1.add(jLabel5);
-
-        jLabel4.setText("jLabel4");
-        scrollPane1.add(jLabel4);
-
-        jLabel3.setText("jLabel3");
-        scrollPane1.add(jLabel3);
-
-        jLabel2.setText("jLabel2");
-        scrollPane1.add(jLabel2);
-
-        jLabel1.setText("jLabel1");
-        scrollPane1.add(jLabel1);
-
-        getContentPane().add(scrollPane1);
-        scrollPane1.setBounds(60, 30, 550, 270);
-
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
-        );
+        jLabel11.setText("jLabel11");
+        scrollPane1.add(jLabel8);
+
+        jLabel10.setText("jLabel10");
+        scrollPane1.add(jTextField2);
+
+        jLabel9.setText("jLabel9");
+        scrollPane1.add(jTextField1);
+
+        jLabel8.setText("jLabel8");
+        scrollPane1.add(jProgressBar1);
+
+        jTextField2.setText("jTextField2");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        scrollPane1.add(jLabel7);
+
+        jTextField1.setText("jTextField1");
+        scrollPane1.add(jLabel6);
+        scrollPane1.add(jLabel5);
+
+        jLabel7.setText("jLabel7");
+        scrollPane1.add(jLabel4);
+
+        jLabel6.setText("jLabel6");
+        scrollPane1.add(jLabel3);
+
+        jLabel5.setText("jLabel5");
+        scrollPane1.add(jLabel2);
+
+        jLabel4.setText("jLabel4");
+        scrollPane1.add(jLabel1);
+
+        jLabel3.setText("jLabel3");
+
+        jLabel2.setText("jLabel2");
+
+        jLabel1.setText("jLabel1");
+
+        jPanel1.add(scrollPane1);
+        jPanel1.add(jPanel2);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 680, 430);
@@ -116,6 +141,10 @@ public class Cardapio extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Tela_Inicial().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,14 +184,26 @@ public class Cardapio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JProgressBar jProgressBar2;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
 }

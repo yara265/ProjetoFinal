@@ -4,6 +4,9 @@
  */
 package lanchonetepeixinhodourado;
 
+import cardapio.Vitamina;
+import pedidos.Item;
+import pedidos.Pedido;
 /**
  *
  * @author yaran
@@ -13,8 +16,15 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form Vitamina_FazerPedido
      */
-    public Vitamina_FazerPedido() {
+    Pedido pedidoteste;
+    
+    public Vitamina_FazerPedido(Pedido pedidoteste) {
         initComponents();
+        this.pedidoteste = pedidoteste;
+    }
+
+    private Vitamina_FazerPedido() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -34,16 +44,20 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        jSpinner1 = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "200 ml", "500 ml", "800 ml" }));
         jComboBox1.setMaximumSize(new java.awt.Dimension(60, 60));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(58, 146, 570, 40);
 
@@ -98,11 +112,17 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(547, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(261, Short.MAX_VALUE)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(137, 137, 137))
         );
 
         getContentPane().add(jPanel1);
@@ -122,7 +142,30 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        String volume = (String) jComboBox1.getSelectedItem();
+        String fruta = (String) jComboBox2.getSelectedItem();
+        int qntdVitamina = Integer.parseInt(jSpinner1.getValue().toString());
+
+        while (qntdVitamina > 0){
+            qntdVitamina = qntdVitamina - 1;
+            if (jRadioButton1.isSelected()){
+            Vitamina vitaminx = new Vitamina(fruta, true, volume);
+            Item vitamina = new Item(vitaminx);
+            this.pedidoteste.addItem(vitamina);
+            }
+            
+            else{
+            Vitamina vitaminx = new Vitamina(fruta, false, volume);
+            Item vitamina = new Item(vitaminx);
+            this.pedidoteste.addItem(vitamina);
+            }        
+        }
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,5 +211,6 @@ public class Vitamina_FazerPedido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JSpinner jSpinner1;
     // End of variables declaration//GEN-END:variables
 }

@@ -23,8 +23,8 @@ public class Pizza extends Produto{
     
     @Override
     public String mostrarProduto(){
-        System.out.println(nome +"---------------R$"+preco);
-        return (nome + " de " + recheio);
+        System.out.println(this.nome+ this.recheio +"---------------R$"+preco);
+        return (this.nome + " de " + this.recheio);
         
     }
     

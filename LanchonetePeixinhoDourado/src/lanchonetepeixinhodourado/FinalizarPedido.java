@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lanchonetepeixinhodourado;
+import pedidos.Pedido;
+import pedidos.Venda;
 
 /**
  *
@@ -13,8 +15,16 @@ public class FinalizarPedido extends javax.swing.JFrame {
     /**
      * Creates new form FinalizarPedido
      */
-    public FinalizarPedido() {
+    Venda venda;
+    Pedido pedidoteste;
+    
+    public FinalizarPedido(Venda venda, Pedido pedidoteste) {
         initComponents();
+        this.pedidoteste = pedidoteste;
+        String a = venda.cliente;
+        String b = venda.finalizarPedidoTeste();
+        PedidosConfirma.setText(b);
+        //PedidosConfirma.setText(a);
     }
 
     /**
@@ -26,6 +36,7 @@ public class FinalizarPedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         PedidosConfirma = new javax.swing.JLabel();
@@ -33,14 +44,11 @@ public class FinalizarPedido extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
-        PedidosConfirma.setText("Pedido");
         jScrollPane1.setViewportView(PedidosConfirma);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
@@ -64,21 +72,23 @@ public class FinalizarPedido extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(260, 260, 260)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(55, 55, 55)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -93,7 +103,7 @@ public class FinalizarPedido extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new FazerPedido().setVisible(true);
+        new FazerPedido(this.pedidoteste).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -132,7 +142,11 @@ public class FinalizarPedido extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FinalizarPedido().setVisible(true);
+                this.setVisible(true);
+            }
+
+            private void setVisible(boolean b) {
+                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
         });
         
@@ -144,6 +158,7 @@ public class FinalizarPedido extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
