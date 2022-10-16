@@ -2,10 +2,15 @@ package lanchonetepeixinhodourado;
 import pedidos.FormaDePagamento;
 import pedidos.Pedido;
 import lanchonetepeixinhodourado.Pizza_FazerPedido;
+import pedidos.Desserializar;
+import pedidos.Serializar;
 public class Tela_Inicial extends javax.swing.JFrame {
 
+    Serializar s1 = new Serializar();
+    
     public Tela_Inicial() {
         initComponents();
+        
     }
 
     /**
@@ -84,6 +89,8 @@ public class Tela_Inicial extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        new Vendas().setVisible(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -95,7 +102,7 @@ public class Tela_Inicial extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Pedido pedido = new Pedido();
-        new FazerPedido(pedido).setVisible(true);
+        new FazerPedido(pedido, this.s1).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed

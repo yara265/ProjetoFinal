@@ -4,6 +4,7 @@
  */
 package lanchonetepeixinhodourado;
 import pedidos.Pedido;
+import pedidos.Serializar;
 import pedidos.Venda;
 
 /**
@@ -15,11 +16,14 @@ public class FinalizarPedido extends javax.swing.JFrame {
     /**
      * Creates new form FinalizarPedido
      */
+    Serializar s1;
     Venda venda;
     Pedido pedidoteste;
     
-    public FinalizarPedido(Venda venda, Pedido pedidoteste) {
+    public FinalizarPedido(Venda v1, Pedido pedidoteste, Serializar s1) {
         initComponents();
+        this.venda = v1;
+        this.s1 = s1;
         this.pedidoteste = pedidoteste;
         String a = venda.cliente;
         String b = venda.finalizarPedidoTeste();
@@ -103,12 +107,13 @@ public class FinalizarPedido extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new FazerPedido(this.pedidoteste).setVisible(true);
+        new FazerPedido(this.pedidoteste, this.s1).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        s1.serializar(venda);
         new ConfirmarPedido().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 

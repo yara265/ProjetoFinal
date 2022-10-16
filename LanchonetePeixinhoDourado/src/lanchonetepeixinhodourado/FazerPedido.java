@@ -6,6 +6,7 @@ package lanchonetepeixinhodourado;
 import pedidos.FormaDePagamento;
 import pedidos.Pedido;
 import lanchonetepeixinhodourado.Pizza_FazerPedido;
+import pedidos.Serializar;
 import pedidos.Venda;
 /**
  *
@@ -16,17 +17,19 @@ public class FazerPedido extends javax.swing.JFrame {
     /**
      * Creates new form FazerPedido
      */
+    Serializar s1;
     
     Pedido pedidoteste;
     
-    public FazerPedido(Pedido pedidoteste) {
-    initComponents();
+    public FazerPedido(Pedido pedidoteste, Serializar s1) {
+    this.s1 = s1;
     this.pedidoteste = pedidoteste;
+    initComponents();
     }
 
     public FazerPedido(){
     initComponents();
-    this.pedidoteste = pedidoteste;    }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -217,8 +220,11 @@ public class FazerPedido extends javax.swing.JFrame {
             this.pedidoteste.cliente = strNomeCliente;
             this.pedidoteste.formaDePagamento = FormaDePagamento.pix;
         }
-        Venda venda = (this.pedidoteste.finalizarPedido());
-        new FinalizarPedido(venda, this.pedidoteste).setVisible(true);
+        Venda v1 = new Venda();
+        v1 = (this.pedidoteste.finalizarPedido());
+        System.out.println("\n" + "\n" + "\n" + "\n" + "\n" + "\n");
+        System.out.println(v1.finalizarPedidoTeste());
+        new FinalizarPedido(v1, this.pedidoteste, this.s1).setVisible(true);
         System.out.println(this.pedidoteste.itens);
         this.dispose();
         

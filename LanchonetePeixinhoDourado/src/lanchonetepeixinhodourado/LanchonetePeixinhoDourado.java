@@ -2,10 +2,12 @@ package lanchonetepeixinhodourado;
 import java.util.ArrayList;
 
 import cardapio.*;
+import pedidos.Desserializar;
 import pedidos.FormaDePagamento;
 import pedidos.Item;
 import pedidos.Pedido;
 import pedidos.Serializacao;
+import pedidos.Serializar;
 import pedidos.Venda;
 public class LanchonetePeixinhoDourado {
 
@@ -59,9 +61,11 @@ public class LanchonetePeixinhoDourado {
         // System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
          Venda v1 = Pedido1.finalizarPedido();
-         //System.out.println(v1.finalizarPedidoTeste());
+         Serializar s1 = new Serializar();
+         s1.serializar(v1);
+         Desserializar d1 = new Desserializar();
+         d1.desserializar();
          //Serializacao.writeFile(v1);
-        
 //        ArrayList<Venda> vendas = Serializacao.readFile();
 //        for (Venda venda : vendas) {
 //            System.out.println(venda);

@@ -1,8 +1,10 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lanchonetepeixinhodourado;
+
+import pedidos.Desserializar;
 
 /**
  *
@@ -13,9 +15,17 @@ public class Vendas extends javax.swing.JFrame {
     /**
      * Creates new form Vendas
      */
+    Desserializar d1 = new Desserializar();
+    String d2;
+    
     public Vendas() {
+        d2 = d1.desserializar();
         initComponents();
+        System.out.println(d2);
+        textoVendas.setText(d2);
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,13 +37,12 @@ public class Vendas extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textoVendas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
         jButton3.setBackground(new java.awt.Color(255, 205, 176));
@@ -45,20 +54,27 @@ public class Vendas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3);
         jButton3.setBounds(60, 310, 148, 35);
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 40, 560, 250);
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
+
+        textoVendas.setText("jLabel1");
+        jScrollPane1.setViewportView(textoVendas);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -111,5 +127,6 @@ public class Vendas extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel textoVendas;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,6 +26,9 @@ public class Venda implements Serializable{
         //this.finalizarPedido();
     }
 
+    public Venda(){
+        
+    }
     public void addVendas(){
         for (Item i: this.itens){
             if (vendas.contains(i)){
@@ -46,7 +49,7 @@ public class Venda implements Serializable{
     public String mostrarPedidoTeste(){
         String a = "";
         for (Item i: this.vendas){
-            a = (i.getQuantidade()+ "    " + i.mostrar() + "      R$" + numberFormat.format(i.getPreco()));
+            a += (i.getQuantidade()+ "    " + i.mostrar() + "      R$" + numberFormat.format(i.getPreco()) + "\n");
         }
         return a;
     }    
