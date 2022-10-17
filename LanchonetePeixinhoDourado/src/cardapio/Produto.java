@@ -25,7 +25,5 @@ public class Produto implements Serializable{
         return (nome + "......................" + preco);
     }
 
-    public void mostrarProdutos(){
-        System.out.println(nome + "......................" + preco);
-    }
+
 }

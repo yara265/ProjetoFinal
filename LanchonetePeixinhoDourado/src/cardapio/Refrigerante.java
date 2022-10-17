@@ -31,6 +31,16 @@ public class Refrigerante extends Produto{
     }
     
     @Override
+    public double getPreco(){
+        if (volume == "1000 ml"){
+            return 7.50;
+        }
+        else{
+            return 5.50;
+        }
+    }
+    
+    @Override
     public String mostrarProduto(){
         return this.marca +" \nVolume: "+ volume + ";  \nValor: R$" + this.preco;
     }

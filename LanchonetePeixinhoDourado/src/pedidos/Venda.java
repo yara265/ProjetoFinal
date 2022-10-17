@@ -23,12 +23,24 @@ public class Venda implements Serializable{
         this.valorPago = valorPago;
         this.addVendas();
         this.finalizarPedidoTeste();
+        this.regraDeNegocio01();
+        this.regraDeNegocio03();
         //this.finalizarPedido();
     }
 
     public Venda(){
         
     }
+    
+    public void regraDeNegocio03(){
+        //Se o pagamento for em debito ou em credito, sera acrescentado uma taxa de 1 real.
+        if (this.formaDePagamento == formaDePagamento.credito || this.formaDePagamento == formaDePagamento.debito){
+            this.valorTotal+=1;
+        }
+    }
+    public ArrayList<Item> getProdutos() {
+        return itens;
+    }    
     public void addVendas(){
         for (Item i: this.itens){
             if (vendas.contains(i)){
@@ -91,7 +103,6 @@ public class Venda implements Serializable{
     }
 
         public String finalizarPedidoTeste(){
-        this.regraDeNegocio01();
         return ("Cliente: "+this.cliente)+ "\n"+
         ("   ------------------------------------   ")+"\n"+
         // Regra de negocio 01
@@ -105,7 +116,6 @@ public class Venda implements Serializable{
     }
         
         public String emitirNotaFiscal(){
-        this.regraDeNegocio01();
         return ("Cliente: "+this.cliente)+ "\n"+
         ("   ------------------------------------   ")+"\n"+
         // Regra de negocio 01

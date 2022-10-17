@@ -5,6 +5,7 @@
 package lanchonetepeixinhodourado;
 
 import pedidos.Serializar;
+import pedidos.Venda;
 
 /**
  *
@@ -16,9 +17,11 @@ public class ConfirmarPedido extends javax.swing.JFrame {
      * Creates new form ConfirmarPedido
      */
     Serializar s1;
+    Venda venda;
     
-    public ConfirmarPedido(Serializar s1) {
+    public ConfirmarPedido(Serializar s1, Venda venda) {
         initComponents();
+        this.venda = venda;
         this.s1 = s1;
     }
 
@@ -101,6 +104,7 @@ public class ConfirmarPedido extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        new EmitirNotaFiscal(this.venda, this.s1).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

@@ -1,20 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lanchonetepeixinhodourado;
 
-/**
- *
- * @author kaiqu
- */
+import pedidos.Serializar;
+import pedidos.Venda;
+
 public class EmitirNotaFiscal extends javax.swing.JFrame {
 
     /**
      * Creates new form EmitirNotaFiscal
      */
-    public EmitirNotaFiscal() {
+    Serializar s1;
+    Venda venda;
+    
+    public EmitirNotaFiscal(Venda venda, Serializar s1) {
+        this.s1 = s1;
+        this.venda = venda;
         initComponents();
+        String c = venda.emitirNotaFiscal();
+        jLabel1.setText(c);
+    }
+
+    private EmitirNotaFiscal() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -34,7 +40,6 @@ public class EmitirNotaFiscal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(673, 422));
         setMinimumSize(new java.awt.Dimension(673, 422));
-        setPreferredSize(new java.awt.Dimension(673, 422));
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
         jPanel1.setLayout(null);
@@ -71,6 +76,7 @@ public class EmitirNotaFiscal extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        new Tela_Inicial(this.s1).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -36,6 +36,22 @@ public class Vitamina extends Produto{
         this.volume = volume;
     }
 
+        @Override
+    public double getPreco(){
+        if (volume == "200 ml"){
+            return 4.50;
+        }
+        if (volume == "500 ml"){
+            return 7.00;
+        }
+        if (volume == "800 ml"){
+            return 8.50;
+        }    
+        else{
+            return 9;
+        }
+    }
+    
     @Override
     public String mostrarProduto(){
         return "Vitamina de "+this.fruta+ ";  Volume: "+ this.volume +";  \nValor: R$" + this.preco;

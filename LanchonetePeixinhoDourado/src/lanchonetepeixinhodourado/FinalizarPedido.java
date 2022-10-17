@@ -144,7 +144,7 @@ public class FinalizarPedido extends javax.swing.JFrame {
         }
         
         this.venda.valorPago = dinheiro;
-        new ConfirmarPedido(this.s1).setVisible(true);
+        new ConfirmarPedido(this.s1, this.venda).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void valorPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorPagoActionPerformed

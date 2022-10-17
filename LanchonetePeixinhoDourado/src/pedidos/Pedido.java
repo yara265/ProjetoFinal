@@ -15,25 +15,14 @@ public class Pedido {
     public Pedido(String cliente, FormaDePagamento formaDePagamento){
         this.cliente = cliente;
         this.formaDePagamento = formaDePagamento;
-        this.regraDeNegocio03();
                 
     }
     
     public Pedido(){
         this.cliente = null;
         this.formaDePagamento = null;
-        this.regraDeNegocio03();    
     }
 
-    public void regraDeNegocio03(){
-        //Se o pagamento for em debito ou em credito, sera acrescentado uma taxa de 1 real.
-        if (this.formaDePagamento == formaDePagamento.credito || this.formaDePagamento == formaDePagamento.debito){
-            this.valor+=1;
-        }
-    }
-    public ArrayList<Item> getProdutos() {
-        return itens;
-    }
 
     public String getCliente() {
         return cliente;
@@ -77,6 +66,7 @@ public class Pedido {
     }
 
     public double calcularPedido(){
+        this.valor = 0;
         for (Item i: this.itens){
             this.valor += i.getPreco();
         }
