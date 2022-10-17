@@ -43,7 +43,7 @@ public class LanchonetePeixinhoDourado {
         // cardapio.addProduto(pizza);
         // cardapio.mostrarCardapio();
         // System.out.println("-----------------------------------------------------------------------------------------------");
-        
+        new Tela_Inicial().setVisible(true);
         
         //cada produto é um item
         Item i1 = new Item(pizza);
@@ -56,13 +56,21 @@ public class LanchonetePeixinhoDourado {
         Pedido1.addItem(i1);
         Pedido1.addItem(i4);
         Pedido1.addItem(i2);
+        
+        Pedido Pedido2 = new Pedido("Yara",FormaDePagamento.pix);
+        //adicionando itens ao pedido
+        //Pedido2.addItem(i3);
+        //Pedido2.addItem(i4);
+        //Pedido2.addItem(i2);
         //metodo de mostrar o pedido
         // Pedido1.mostrarPedido();
         // System.out.println("-----------------------------------------------------------------------------------------------");
         //metodo para finalizar pedido
          Venda v1 = Pedido1.finalizarPedido();
+         Venda v2 = Pedido2.finalizarPedido();
          Serializar s1 = new Serializar();
          s1.serializar(v1);
+         s1.serializar(v2);
          Desserializar d1 = new Desserializar();
          d1.desserializar();
          //Serializacao.writeFile(v1);

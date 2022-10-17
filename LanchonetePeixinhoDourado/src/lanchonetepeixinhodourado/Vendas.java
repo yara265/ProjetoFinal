@@ -58,7 +58,12 @@ public class Vendas extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
         textoVendas.setText("jLabel1");
+        textoVendas.setToolTipText("");
+        textoVendas.setAlignmentX(0.5F);
+        textoVendas.setAlignmentY(0.0F);
+        textoVendas.setAutoscrolls(true);
         jScrollPane1.setViewportView(textoVendas);
+        textoVendas.getAccessibleContext().setAccessibleDescription("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

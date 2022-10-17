@@ -40,19 +40,23 @@ public class FazerPedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        nomeCliente = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         formaPag = new javax.swing.JComboBox<>();
         btnfazerPedido = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        nomeCliente2 = new javax.swing.JTextField();
+        intDinheiro = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        nomeCliente1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 673, 440));
@@ -61,68 +65,14 @@ public class FazerPedido extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
-        jButton2.setText("Pizza");
-        jButton2.setPreferredSize(new java.awt.Dimension(83, 61));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(30, 230, 83, 61);
-
-        jButton3.setText("Lanche");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(160, 230, 83, 61);
-
-        jButton4.setText("Salgado");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(290, 230, 83, 61);
-
-        jButton5.setText("Vitamina");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(420, 230, 83, 61);
-
-        jButton6.setText("Refri");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(550, 230, 83, 61);
-
-        nomeCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nomeCliente);
-        nomeCliente.setBounds(40, 50, 570, 40);
-
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
         jPanel1.setForeground(new java.awt.Color(217, 225, 248));
         jPanel1.setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Forma de Pagamento:");
+        jLabel3.setText("Valor Pago:");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 110, 190, 20);
+        jLabel3.setBounds(40, 190, 190, 20);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Nome:");
@@ -141,7 +91,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnfazerPedido);
-        btnfazerPedido.setBounds(360, 310, 270, 62);
+        btnfazerPedido.setBounds(360, 350, 270, 62);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("VOLTAR");
@@ -151,7 +101,79 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(30, 310, 270, 62);
+        jButton1.setBounds(30, 350, 270, 62);
+
+        jButton2.setText("Pizza");
+        jButton2.setPreferredSize(new java.awt.Dimension(83, 61));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(30, 280, 83, 61);
+
+        jButton3.setText("Lanche");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(160, 280, 83, 61);
+
+        jButton4.setText("Salgado");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(280, 280, 83, 61);
+
+        jButton5.setText("Vitamina");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5);
+        jButton5.setBounds(410, 280, 83, 61);
+
+        jButton6.setText("Refri");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6);
+        jButton6.setBounds(540, 280, 83, 61);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setText("Forma de Pagamento:");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(40, 110, 190, 20);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setText("Forma de Pagamento:");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(40, 110, 190, 20);
+
+        nomeCliente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeCliente2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nomeCliente2);
+        nomeCliente2.setBounds(40, 50, 570, 40);
+
+        intDinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                intDinheiroActionPerformed(evt);
+            }
+        });
+        jPanel1.add(intDinheiro);
+        intDinheiro.setBounds(40, 220, 570, 40);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 680, 430);
@@ -159,6 +181,14 @@ public class FazerPedido extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 38, 16);
+
+        nomeCliente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeCliente1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeCliente1);
+        nomeCliente1.setBounds(40, 50, 570, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -168,9 +198,9 @@ public class FazerPedido extends javax.swing.JFrame {
         new Pizza_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void nomeClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeClienteActionPerformed
+    private void intDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intDinheiroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeClienteActionPerformed
+    }//GEN-LAST:event_intDinheiroActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -201,8 +231,10 @@ public class FazerPedido extends javax.swing.JFrame {
 
     private void btnfazerPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfazerPedidoActionPerformed
         // TODO add your handling code here:
-        String strNomeCliente = nomeCliente.getText();
+        String strNomeCliente = nomeCliente2.getText();
         String strFormaPag = (String)formaPag.getSelectedItem();
+        int valorPago = Integer.parseInt(intDinheiro.getText());
+        
         
         if (strFormaPag=="Dinheiro"){
             this.pedidoteste.cliente = strNomeCliente;
@@ -221,6 +253,7 @@ public class FazerPedido extends javax.swing.JFrame {
             this.pedidoteste.formaDePagamento = FormaDePagamento.pix;
         }
         Venda v1 = new Venda();
+        this.pedidoteste.valorPago = valorPago;
         v1 = (this.pedidoteste.finalizarPedido());
         System.out.println("\n" + "\n" + "\n" + "\n" + "\n" + "\n");
         System.out.println(v1.finalizarPedidoTeste());
@@ -229,6 +262,14 @@ public class FazerPedido extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_btnfazerPedidoActionPerformed
+
+    private void nomeCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeCliente1ActionPerformed
+
+    private void nomeCliente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCliente2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeCliente2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,6 +309,7 @@ public class FazerPedido extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnfazerPedido;
     private javax.swing.JComboBox<String> formaPag;
+    private javax.swing.JTextField intDinheiro;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -277,8 +319,11 @@ public class FazerPedido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nomeCliente;
+    private javax.swing.JTextField nomeCliente1;
+    private javax.swing.JTextField nomeCliente2;
     // End of variables declaration//GEN-END:variables
 
 
