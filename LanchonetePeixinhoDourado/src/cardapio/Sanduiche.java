@@ -5,9 +5,12 @@ public class Sanduiche extends Produto{
     public String recheio;
     public String tipoDoPao;
     public String molho;
-    
+        public double preco;
+
+        
     public Sanduiche(String recheio, String tipoDoPao, String molho) {
-        super(10, "Sanduiche");
+        super("Sanduiche");
+        this.preco = 6.50;
         this.recheio = recheio;
         this.tipoDoPao = tipoDoPao;
         this.molho = molho;

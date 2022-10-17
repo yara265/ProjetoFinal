@@ -48,7 +48,6 @@ public class Cardapio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -82,16 +81,16 @@ public class Cardapio extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
         jLabel11.setText("jLabel11");
-        scrollPane1.add(jLabel8);
-
-        jLabel10.setText("jLabel10");
-        scrollPane1.add(jTextField2);
-
-        jLabel9.setText("jLabel9");
         scrollPane1.add(jTextField1);
 
-        jLabel8.setText("jLabel8");
+        jLabel10.setText("jLabel10");
         scrollPane1.add(jProgressBar1);
+
+        jLabel9.setText("jLabel9");
+        scrollPane1.add(jLabel7);
+
+        jLabel8.setText("jLabel8");
+        scrollPane1.add(jLabel6);
 
         jTextField2.setText("jTextField2");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -99,23 +98,21 @@ public class Cardapio extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        scrollPane1.add(jLabel7);
-
-        jTextField1.setText("jTextField1");
-        scrollPane1.add(jLabel6);
         scrollPane1.add(jLabel5);
 
-        jLabel7.setText("jLabel7");
+        jTextField1.setText("jTextField1");
         scrollPane1.add(jLabel4);
-
-        jLabel6.setText("jLabel6");
         scrollPane1.add(jLabel3);
 
-        jLabel5.setText("jLabel5");
+        jLabel7.setText("jLabel7");
         scrollPane1.add(jLabel2);
 
-        jLabel4.setText("jLabel4");
+        jLabel6.setText("jLabel6");
         scrollPane1.add(jLabel1);
+
+        jLabel5.setText("jLabel5");
+
+        jLabel4.setText("jLabel4");
 
         jLabel3.setText("jLabel3");
 
@@ -124,7 +121,6 @@ public class Cardapio extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         jPanel1.add(scrollPane1);
-        jPanel1.add(jPanel2);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 680, 430);
@@ -197,7 +193,6 @@ public class Cardapio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;

@@ -4,9 +4,16 @@ public class Refrigerante extends Produto{
     
     public String marca;
     public String volume;
-    
+    public double preco;
+
     public Refrigerante(String marca, String volume) {
-        super(7.50, "Refrigerante");
+        super("Refrigerante");
+        if (volume == "1000 ml"){
+            this.preco = 7.50;
+        }
+        else{
+            this.preco = 5.50;
+        }
         this.marca = marca;
         this.volume = volume;
     }

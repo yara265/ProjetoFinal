@@ -5,15 +5,20 @@ public class Vitamina extends Produto{
     public String fruta;
     public boolean acucar;
     public String volume;
-    
+    public double preco;
+
     public Vitamina(String fruta, boolean acucar, String volume) {
-        super(7, "Vitamina");
+        super("Vitamina");
         this.fruta = fruta;
         this.acucar = false;
         this.volume = volume;
-        if(volume=="500"){
+        if(volume=="200 ml"){
+            this.preco = 7;
+        }        
+        if(volume=="500 ml"){
             this.preco = 9;
-        }else if(volume=="800"){
+        }
+        if(volume=="800 ml"){
             this.preco = 11;
         }
     }

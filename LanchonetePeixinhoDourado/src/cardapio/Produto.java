@@ -8,7 +8,7 @@ public class Produto implements Serializable{
     public double preco;
     public String nome;
     
-    public Produto (double preco, String nome){
+    public Produto (String nome){
         this.preco = preco;
         this.nome = nome;
     }

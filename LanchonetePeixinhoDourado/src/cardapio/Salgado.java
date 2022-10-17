@@ -4,9 +4,11 @@ public class Salgado extends Produto{
     
     public String sabor;
     public String tipo;
-    
+    public double preco;
+
     public Salgado(String sabor, String tipo) {
-        super(7, "Salgado");
+        super("Salgado");
+        this.preco = 5;
         this.sabor = sabor;
         this.tipo = tipo;
     }

@@ -258,7 +258,6 @@ public class FazerPedido extends javax.swing.JFrame {
         System.out.println(v1.finalizarPedidoTeste());
         new FinalizarPedido(v1, this.pedidoteste, this.s1).setVisible(true);
         System.out.println(this.pedidoteste.itens);
-        this.dispose();
         
     }//GEN-LAST:event_btnfazerPedidoActionPerformed
 

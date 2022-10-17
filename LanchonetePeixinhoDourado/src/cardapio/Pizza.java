@@ -4,12 +4,13 @@ public class Pizza extends Produto{
     
     public String recheio;
     public boolean borda;
+    public double preco;
     
     public Pizza(String recheio, boolean borda) {
-        super(50.0, "Pizza");
+        super("Pizza");
+        this.preco = 50;
         this.recheio = recheio;
         this.borda = false;
-        
     }
 
     public void setRecheio(String recheio) {

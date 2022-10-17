@@ -54,7 +54,7 @@ public class Refrigerante_FazerPedido extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "280 ml", "1000ml" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "280 ml", "1000 ml" }));
         jComboBox2.setMaximumSize(new java.awt.Dimension(60, 60));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
