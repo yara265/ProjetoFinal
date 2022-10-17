@@ -6,11 +6,15 @@ import pedidos.Desserializar;
 import pedidos.Serializar;
 public class Tela_Inicial extends javax.swing.JFrame {
 
-    Serializar s1 = new Serializar();
+    Serializar s1;
     
-    public Tela_Inicial() {
+    public Tela_Inicial(Serializar s1) {
         initComponents();
-        
+        this.s1 = s1;
+    }
+
+    private Tela_Inicial() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

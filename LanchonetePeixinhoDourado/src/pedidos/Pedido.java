@@ -104,7 +104,7 @@ public class Pedido {
     }
     
     public Venda finalizarPedido(){
-        Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.calcularPedido(), this.valorPago());    
+        Venda v = new Venda(this.cliente, this.itens, this.formaDePagamento, this.calcularPedido(), this.valorPago);    
         return v;
     }
     

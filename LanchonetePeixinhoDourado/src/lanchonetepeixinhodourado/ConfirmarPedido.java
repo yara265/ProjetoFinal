@@ -4,6 +4,8 @@
  */
 package lanchonetepeixinhodourado;
 
+import pedidos.Serializar;
+
 /**
  *
  * @author yaran
@@ -13,8 +15,15 @@ public class ConfirmarPedido extends javax.swing.JFrame {
     /**
      * Creates new form ConfirmarPedido
      */
-    public ConfirmarPedido() {
+    Serializar s1;
+    
+    public ConfirmarPedido(Serializar s1) {
         initComponents();
+        this.s1 = s1;
+    }
+
+    private ConfirmarPedido() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -87,7 +96,7 @@ public class ConfirmarPedido extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        new Tela_Inicial().setVisible(true);
+        new Tela_Inicial(this.s1).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

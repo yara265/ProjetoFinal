@@ -92,6 +92,8 @@
           <AbsoluteConstraints x="0" y="0" width="680" height="430"/>
         </Constraint>
       </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
         <Container class="java.awt.ScrollPane" name="scrollPane1">
 
