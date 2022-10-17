@@ -8,6 +8,7 @@ public class Pizza extends Produto{
     
     public Pizza(String recheio, boolean borda) {
         super(50, "Pizza");
+        this.preco = 50;
         this.recheio = recheio;
         this.borda = false;
     }
@@ -23,8 +24,7 @@ public class Pizza extends Produto{
     
     @Override
     public String mostrarProduto(){
-        System.out.println(this.nome+ this.recheio +"---------------R$"+preco);
-        return (this.nome + " de " + this.recheio);
+        return this.nome + " de " + this.recheio + ";  \nValor: R$" + this.preco;
         
     }
     

@@ -255,7 +255,7 @@ public class FazerPedido extends javax.swing.JFrame {
         this.pedidoteste.valorPago = valorPago;
         v1 = (this.pedidoteste.finalizarPedido());
         System.out.println("\n" + "\n" + "\n" + "\n" + "\n" + "\n");
-        System.out.println(v1.finalizarPedidoTeste());
+        //System.out.println(v1.finalizarPedidoTeste());
         new FinalizarPedido(v1, this.pedidoteste, this.s1).setVisible(true);
         System.out.println(this.pedidoteste.itens);
         

@@ -8,6 +8,7 @@ public class Salgado extends Produto{
 
     public Salgado(String sabor, String tipo) {
         super(5, "Salgado");
+        this.preco = 5;
         this.sabor = sabor;
         this.tipo = tipo;
     }
@@ -23,7 +24,7 @@ public class Salgado extends Produto{
     @Override
     public String mostrarProduto(){
         System.out.println("----------Produto-----------");
-        return (nome + " de " + sabor + "\nTipo: " + tipo + "\nValor:R$" + preco);
+        return nome + " de " + sabor + ";  \nTipo: " + tipo + ";  \nValor: R$" + this.preco;
     }
     
 }

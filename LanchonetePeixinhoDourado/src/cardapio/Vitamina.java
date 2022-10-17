@@ -9,18 +9,19 @@ public class Vitamina extends Produto{
 
     public Vitamina(String fruta, boolean acucar, String volume) {
         super(9, "Vitamina");
+        if (volume == "200 ml"){
+            this.preco = 4.50;
+        }
+        if (volume == "500 ml"){
+            this.preco = 7.00;
+        }
+        if (volume == "800 ml"){
+            this.preco = 8.50;
+        }
         this.fruta = fruta;
         this.acucar = false;
         this.volume = volume;
-        if(volume=="200 ml"){
-            this.preco = 7;
-        }        
-        if(volume=="500 ml"){
-            this.preco = 9;
-        }
-        if(volume=="800 ml"){
-            this.preco = 11;
-        }
+
     }
 
     public void setSabor(String fruta) {
@@ -37,9 +38,6 @@ public class Vitamina extends Produto{
 
     @Override
     public String mostrarProduto(){
-        System.out.println("Vitamina---------------R$"+this.preco);
-        String produtos = "";
-
-        return produtos;
+        return "Vitamina de "+this.fruta+ ";  Volume: "+ this.volume +";  \nValor: R$" + this.preco;
     }
 }

@@ -26,7 +26,9 @@ public class FinalizarPedido extends javax.swing.JFrame {
         this.s1 = s1;
         this.pedidoteste = pedidoteste;
         String a = venda.cliente;
+        System.out.println("Pedido Abaixo");
         String b = venda.finalizarPedidoTeste();
+        System.out.println(b + "\n"+ "\n"+ "\n"+ "\n");
         PedidosConfirma.setText(b);
         //PedidosConfirma.setText(a);
     }
@@ -42,7 +44,7 @@ public class FinalizarPedido extends javax.swing.JFrame {
 
         jScrollBar1 = new javax.swing.JScrollBar();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane(jPanel1, jScrollPane1.VERTICAL_SCROLLBAR_AS_NEEDED,jScrollPane1.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         PedidosConfirma = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -83,9 +85,9 @@ public class FinalizarPedido extends javax.swing.JFrame {
                         .addGap(260, 260, 260)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addContainerGap(56, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addGap(68, 68, 68))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -31,7 +31,7 @@ public class Sanduiche extends Produto{
     @Override
     public String mostrarProduto(){
         System.out.println("----------Produto-----------");
-        return (nome + " de " + recheio +"\nTipo de Pão: " + tipoDoPao +"\nMolho: " + molho + "\nValor:R$" + preco);
+        return nome + " de " + recheio +";  \nTipo de Pão: " + tipoDoPao +";  \nMolho: " + molho + ";  \nValor: R$" + this.preco;
     }
     
 }

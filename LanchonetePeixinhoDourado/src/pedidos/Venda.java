@@ -49,7 +49,7 @@ public class Venda implements Serializable{
     public String mostrarPedidoTeste(){
         String a = "";
         for (Item i: this.vendas){
-            a += (i.getQuantidade()+ "    " + i.mostrar() + "      R$" + numberFormat.format(i.getPreco()) + "\n");
+            a += (i.mostrar()+ "    ||    " + "\n" );
         }
         return a;
     }    
@@ -68,16 +68,16 @@ public class Venda implements Serializable{
             return valorPago(this.valorPago) - this.valorTotal;
     }
     
-    public double regraDeNegocio01(){
+    public void regraDeNegocio01(){
         if (this.valorTotal >= 150){
             this.valorTotal = this.valorTotal*0.90;
         }
-        return valorTotal;
+        //return valorTotal;
     }
     
     public void finalizarPedido(){
         System.out.println("Cliente: "+this.cliente);
-        System.out.println("------------------------------------");
+        System.out.println("   ------------------------------------   ");
         // Regra de negocio 01
         System.out.println("Qntd    Produtos        Preco");
         System.out.println("------------------------------------");
@@ -91,19 +91,19 @@ public class Venda implements Serializable{
     }
 
         public String finalizarPedidoTeste(){
-            
+        this.regraDeNegocio01();
         return ("Cliente: "+this.cliente)+ "\n"+
-        ("------------------------------------")+"\n"+
+        ("   ------------------------------------   ")+"\n"+
         // Regra de negocio 01
-        ("Qntd    Produtos        Preco")+"\n"+
-        ("------------------------------------")+"\n"+
+        //("Qntd    Produtos        Preco")+"\n"+
+        //("------------------------------------")+"\n"+
         this.mostrarPedidoTeste()+"\n"+
-        this.regraDeNegocio01()+"\n"+
+        "\n"+
         //System.out.println(this.valorTotal);
-        ("Forma de pagamento: " +  this.formaDePagamento)+"\n"+
-        ("Total:                    R$" + numberFormat.format(this.valorTotal))+"\n"+
-        ("Valor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago)))+"\n"+
-        ("Troco:                    R$" + numberFormat.format(troco()));
+        ("Forma de pagamento: " +  this.formaDePagamento)+"   --  \n"+
+        ("Total:     R$" + numberFormat.format(this.valorTotal))+"   --  \n"+
+        ("Valor Pago:     R$" + numberFormat.format(this.valorPago(this.valorPago)))+"   --  \n"+
+        ("Troco:     R$" + numberFormat.format(troco()));
     }
     
     @Override
@@ -112,10 +112,11 @@ public class Venda implements Serializable{
         cliente +"\n------------------------------------"+
         "\nQntd    Produtos        Preco"+
         "\n------------------------------------"+
+        "    ||   "+
         "\nForma de Pagamento: "+ formaDePagamento+
         "\nTotal:                    R$" + numberFormat.format(this.valorTotal)+
         "\nValor Pago:               R$" + numberFormat.format(this.valorPago(this.valorPago))+
-        "\nTroco:                    R$" + numberFormat.format(troco()));
+        "\nTroco:                    R$" + numberFormat.format(troco()) + "                ");
     }
     
 }   

@@ -32,7 +32,6 @@ public class Refrigerante extends Produto{
     
     @Override
     public String mostrarProduto(){
-        System.out.println("----------Produto-----------");
-        return (nome + "\nMarca: " + marca +" \nVolume: "+ volume +"ml " + "\nValor:R$" + preco);
+        return this.marca +" \nVolume: "+ volume + ";  \nValor: R$" + this.preco;
     }
 }
