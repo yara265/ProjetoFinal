@@ -7,8 +7,7 @@ public class Pizza extends Produto{
     public double preco;
     
     public Pizza(String recheio, boolean borda) {
-        super("Pizza");
-        this.preco = 50;
+        super(50, "Pizza");
         this.recheio = recheio;
         this.borda = false;
     }

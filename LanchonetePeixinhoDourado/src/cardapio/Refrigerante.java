@@ -7,7 +7,7 @@ public class Refrigerante extends Produto{
     public double preco;
 
     public Refrigerante(String marca, String volume) {
-        super("Refrigerante");
+        super(7, "Refrigerante");
         if (volume == "1000 ml"){
             this.preco = 7.50;
         }

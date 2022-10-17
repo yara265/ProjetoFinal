@@ -7,8 +7,7 @@ public class Salgado extends Produto{
     public double preco;
 
     public Salgado(String sabor, String tipo) {
-        super("Salgado");
-        this.preco = 5;
+        super(5, "Salgado");
         this.sabor = sabor;
         this.tipo = tipo;
     }

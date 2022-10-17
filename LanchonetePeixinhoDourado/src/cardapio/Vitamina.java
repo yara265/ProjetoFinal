@@ -8,7 +8,7 @@ public class Vitamina extends Produto{
     public double preco;
 
     public Vitamina(String fruta, boolean acucar, String volume) {
-        super("Vitamina");
+        super(9, "Vitamina");
         this.fruta = fruta;
         this.acucar = false;
         this.volume = volume;
