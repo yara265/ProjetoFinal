@@ -20,7 +20,7 @@ public class Cardapio extends javax.swing.JFrame {
         Cardapio_ c1 = new Cardapio_();
         String c;
         c = c1.mostrar();
-        jLabel1.setText(c);
+        jLabel12.setText(c);
     }
 
     /**
@@ -37,7 +37,6 @@ public class Cardapio extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jLabel12 = new javax.swing.JLabel();
@@ -53,16 +52,6 @@ public class Cardapio extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(217, 225, 248));
         jPanel2.setLayout(null);
-
-        jButton1.setBackground(new java.awt.Color(255, 205, 176));
-        jButton1.setText("Atualizar Cardápio");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(460, 310, 148, 35);
 
         jButton2.setBackground(new java.awt.Color(255, 205, 176));
         jButton2.setText("Voltar");
@@ -85,11 +74,6 @@ public class Cardapio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        new AtualizarCardapio().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -132,7 +116,6 @@ public class Cardapio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel12;

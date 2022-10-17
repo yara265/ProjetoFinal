@@ -36,14 +36,14 @@ public class Cardapio_ {
         Vitamina v2 = new Vitamina("Maca", true, "200 ml");
         Vitamina v3 = new Vitamina("Abacate", true, "200 ml");
         Vitamina v4 = new Vitamina("Pera", true, "200 ml");
-        Vitamina v5 = new Vitamina("Banana", true, "200 ml");
-        Vitamina v6 = new Vitamina("Maca", true, "200 ml");
-        Vitamina v7 = new Vitamina("Abacate", true, "200 ml");
-        Vitamina v8 = new Vitamina("Pera", true, "200 ml");
-        Vitamina v9 = new Vitamina("Banana", true, "200 ml");
-        Vitamina v10 = new Vitamina("Maca", true, "200 ml");
-        Vitamina v11 = new Vitamina("Abacate", true, "200 ml");
-        Vitamina v12 = new Vitamina("Pera", true, "200 ml");
+        Vitamina v5 = new Vitamina("Banana", true, "500 ml");
+        Vitamina v6 = new Vitamina("Maca", true, "500 ml");
+        Vitamina v7 = new Vitamina("Abacate", true, "500 ml");
+        Vitamina v8 = new Vitamina("Pera", true, "500 ml");
+        Vitamina v9 = new Vitamina("Banana", true, "800 ml");
+        Vitamina v10 = new Vitamina("Maca", true, "800 ml");
+        Vitamina v11 = new Vitamina("Abacate", true, "800 ml");
+        Vitamina v12 = new Vitamina("Pera", true, "800 ml");
         
         produtos.add(p1);
         produtos.add(p2);
