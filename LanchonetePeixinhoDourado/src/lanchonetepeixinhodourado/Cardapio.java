@@ -30,24 +30,11 @@ public class Cardapio extends javax.swing.JFrame {
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
+        jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        scrollPane1 = new java.awt.ScrollPane();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jLabel12 = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -58,6 +45,9 @@ public class Cardapio extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(673, 422));
         getContentPane().setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(217, 225, 248));
+        jPanel2.setLayout(null);
+
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("Atualizar Cardápio");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +55,7 @@ public class Cardapio extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
+        jPanel2.add(jButton1);
         jButton1.setBounds(460, 310, 148, 35);
 
         jButton2.setBackground(new java.awt.Color(255, 205, 176));
@@ -75,55 +65,17 @@ public class Cardapio extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
+        jPanel2.add(jButton2);
         jButton2.setBounds(60, 310, 148, 35);
 
-        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
+        jLabel12.setText("jLabel12");
+        jScrollPane2.setViewportView(jLabel12);
 
-        jLabel11.setText("jLabel11");
-        scrollPane1.add(jTextField1);
+        jPanel2.add(jScrollPane2);
+        jScrollPane2.setBounds(60, 30, 560, 250);
 
-        jLabel10.setText("jLabel10");
-        scrollPane1.add(jProgressBar1);
-
-        jLabel9.setText("jLabel9");
-        scrollPane1.add(jLabel7);
-
-        jLabel8.setText("jLabel8");
-        scrollPane1.add(jLabel6);
-
-        jTextField2.setText("jTextField2");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        scrollPane1.add(jLabel5);
-
-        jTextField1.setText("jTextField1");
-        scrollPane1.add(jLabel4);
-        scrollPane1.add(jLabel3);
-
-        jLabel7.setText("jLabel7");
-        scrollPane1.add(jLabel2);
-
-        jLabel6.setText("jLabel6");
-        scrollPane1.add(jLabel1);
-
-        jLabel5.setText("jLabel5");
-
-        jLabel4.setText("jLabel4");
-
-        jLabel3.setText("jLabel3");
-
-        jLabel2.setText("jLabel2");
-
-        jLabel1.setText("jLabel1");
-
-        jPanel1.add(scrollPane1);
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 680, 430);
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 680, 430);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -137,10 +89,6 @@ public class Cardapio extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,24 +129,11 @@ public class Cardapio extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private java.awt.ScrollPane scrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
