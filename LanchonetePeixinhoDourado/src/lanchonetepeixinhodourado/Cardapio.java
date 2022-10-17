@@ -4,6 +4,8 @@
  */
 package lanchonetepeixinhodourado;
 
+import cardapio.Cardapio_;
+
 /**
  *
  * @author yaran
@@ -15,6 +17,10 @@ public class Cardapio extends javax.swing.JFrame {
      */
     public Cardapio() {
         initComponents();
+        Cardapio_ c1 = new Cardapio_();
+        String c;
+        c = c1.mostrar();
+        jLabel1.setText(c);
     }
 
     /**
@@ -34,8 +40,8 @@ public class Cardapio extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         scrollPane1 = new java.awt.ScrollPane();
+        ola = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -80,17 +86,17 @@ public class Cardapio extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
-        jLabel11.setText("jLabel11");
-        scrollPane1.add(jTextField1);
+        ola.setText("jLabel10");
+        scrollPane1.add(jLabel4);
 
-        jLabel10.setText("jLabel10");
-        scrollPane1.add(jProgressBar1);
+        jLabel11.setText("jLabel11");
+        scrollPane1.add(jLabel3);
 
         jLabel9.setText("jLabel9");
-        scrollPane1.add(jLabel7);
+        scrollPane1.add(jLabel2);
 
         jLabel8.setText("jLabel8");
-        scrollPane1.add(jLabel6);
+        scrollPane1.add(jLabel1);
 
         jTextField2.setText("jTextField2");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -98,17 +104,12 @@ public class Cardapio extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        scrollPane1.add(jLabel5);
 
         jTextField1.setText("jTextField1");
-        scrollPane1.add(jLabel4);
-        scrollPane1.add(jLabel3);
 
         jLabel7.setText("jLabel7");
-        scrollPane1.add(jLabel2);
 
         jLabel6.setText("jLabel6");
-        scrollPane1.add(jLabel1);
 
         jLabel5.setText("jLabel5");
 
@@ -182,7 +183,6 @@ public class Cardapio extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -199,6 +199,7 @@ public class Cardapio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel ola;
     private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
 }

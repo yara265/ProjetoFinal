@@ -44,12 +44,12 @@ public class Disponiveis extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Nome:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(42, 56, 40, 20);
+        jLabel1.setBounds(42, 56, 42, 20);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Tipo:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(364, 56, 29, 20);
+        jLabel2.setBounds(364, 56, 31, 20);
 
         jTextField1.setMaximumSize(new java.awt.Dimension(64, 22));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
