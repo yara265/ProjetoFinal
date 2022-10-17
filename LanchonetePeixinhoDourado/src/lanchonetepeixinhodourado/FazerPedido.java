@@ -41,7 +41,6 @@ public class FazerPedido extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         formaPag = new javax.swing.JComboBox<>();
         btnfazerPedido = new javax.swing.JButton();
@@ -54,7 +53,6 @@ public class FazerPedido extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         nomeCliente2 = new javax.swing.JTextField();
-        intDinheiro = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         nomeCliente1 = new javax.swing.JTextField();
 
@@ -67,12 +65,9 @@ public class FazerPedido extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(217, 225, 248));
         jPanel1.setForeground(new java.awt.Color(217, 225, 248));
+        jPanel1.setMinimumSize(new java.awt.Dimension(680, 600));
+        jPanel1.setRequestFocusEnabled(false);
         jPanel1.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Valor Pago:");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 190, 190, 20);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Nome:");
@@ -91,7 +86,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnfazerPedido);
-        btnfazerPedido.setBounds(360, 350, 270, 62);
+        btnfazerPedido.setBounds(360, 290, 270, 62);
 
         jButton1.setBackground(new java.awt.Color(255, 205, 176));
         jButton1.setText("VOLTAR");
@@ -101,7 +96,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(30, 350, 270, 62);
+        jButton1.setBounds(30, 290, 270, 62);
 
         jButton2.setText("Pizza");
         jButton2.setPreferredSize(new java.awt.Dimension(83, 61));
@@ -111,7 +106,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(30, 280, 83, 61);
+        jButton2.setBounds(30, 210, 83, 61);
 
         jButton3.setText("Lanche");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +115,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(160, 280, 83, 61);
+        jButton3.setBounds(150, 210, 83, 61);
 
         jButton4.setText("Salgado");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +124,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(280, 280, 83, 61);
+        jButton4.setBounds(280, 210, 80, 61);
 
         jButton5.setText("Vitamina");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +133,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(410, 280, 83, 61);
+        jButton5.setBounds(410, 210, 83, 61);
 
         jButton6.setText("Refri");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +142,7 @@ public class FazerPedido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(540, 280, 83, 61);
+        jButton6.setBounds(540, 210, 83, 61);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Forma de Pagamento:");
@@ -167,16 +162,8 @@ public class FazerPedido extends javax.swing.JFrame {
         jPanel1.add(nomeCliente2);
         nomeCliente2.setBounds(40, 50, 570, 40);
 
-        intDinheiro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                intDinheiroActionPerformed(evt);
-            }
-        });
-        jPanel1.add(intDinheiro);
-        intDinheiro.setBounds(40, 220, 570, 40);
-
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 680, 430);
+        jPanel1.setBounds(0, 0, 680, 600);
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
@@ -197,10 +184,6 @@ public class FazerPedido extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Pizza_FazerPedido(this.pedidoteste).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void intDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intDinheiroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_intDinheiroActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -232,7 +215,6 @@ public class FazerPedido extends javax.swing.JFrame {
         // TODO add your handling code here:
         String strNomeCliente = nomeCliente2.getText();
         String strFormaPag = (String)formaPag.getSelectedItem();
-        int valorPago = Integer.parseInt(intDinheiro.getText());
         
         
         if (strFormaPag=="Dinheiro"){
@@ -252,7 +234,6 @@ public class FazerPedido extends javax.swing.JFrame {
             this.pedidoteste.formaDePagamento = FormaDePagamento.pix;
         }
         Venda v1 = new Venda();
-        this.pedidoteste.valorPago = valorPago;
         v1 = (this.pedidoteste.finalizarPedido());
         System.out.println("\n" + "\n" + "\n" + "\n" + "\n" + "\n");
         //System.out.println(v1.finalizarPedidoTeste());
@@ -307,7 +288,6 @@ public class FazerPedido extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnfazerPedido;
     private javax.swing.JComboBox<String> formaPag;
-    private javax.swing.JTextField intDinheiro;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -316,7 +296,6 @@ public class FazerPedido extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

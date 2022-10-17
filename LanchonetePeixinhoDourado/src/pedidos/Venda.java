@@ -101,6 +101,20 @@ public class Venda implements Serializable{
         "\n"+
         //System.out.println(this.valorTotal);
         ("Forma de pagamento: " +  this.formaDePagamento)+"   --  \n"+
+        ("Total:     R$" + numberFormat.format(this.valorTotal));
+    }
+        
+        public String emitirNotaFiscal(){
+        this.regraDeNegocio01();
+        return ("Cliente: "+this.cliente)+ "\n"+
+        ("   ------------------------------------   ")+"\n"+
+        // Regra de negocio 01
+        //("Qntd    Produtos        Preco")+"\n"+
+        //("------------------------------------")+"\n"+
+        this.mostrarPedidoTeste()+"\n"+
+        "\n"+
+        //System.out.println(this.valorTotal);
+        ("Forma de pagamento: " +  this.formaDePagamento)+"   --  \n"+
         ("Total:     R$" + numberFormat.format(this.valorTotal))+"   --  \n"+
         ("Valor Pago:     R$" + numberFormat.format(this.valorPago(this.valorPago)))+"   --  \n"+
         ("Troco:     R$" + numberFormat.format(troco()));
