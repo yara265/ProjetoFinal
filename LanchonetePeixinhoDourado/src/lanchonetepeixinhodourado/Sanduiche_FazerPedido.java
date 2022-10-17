@@ -109,7 +109,7 @@ public class Sanduiche_FazerPedido extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(430, 340, 148, 35);
 
-        jPanel1.setBackground(new java.awt.Color(217, 205, 247));
+        jPanel1.setBackground(new java.awt.Color(217, 225, 248));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Integral", "Francês", "Hamburguer" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {

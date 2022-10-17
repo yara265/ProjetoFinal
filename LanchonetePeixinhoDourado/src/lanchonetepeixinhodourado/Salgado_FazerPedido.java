@@ -59,7 +59,7 @@ public class Salgado_FazerPedido extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Frito");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(59, 41, 47, 20);
+        jRadioButton1.setBounds(59, 41, 70, 20);
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(60, 250, 60, 30);
         getContentPane().add(jSpinner2);
