@@ -53,12 +53,12 @@ public class LanchonetePeixinhoDourado {
         Item i3 = new Item(salgado);
         Item i4 = new Item(vitamina);
         //criando pedido
-        Pedido Pedido1 = new Pedido("Alexandro",FormaDePagamento.dinheiro);
+        Pedido Pedido1 = new Pedido("Alexandro",FormaDePagamento.DINHEIRO);
         //adicionando itens ao pedido
         Pedido1.addItem(i1);
         Pedido1.addItem(i4);
         Pedido1.addItem(i2);
-        Pedido Pedido2 = new Pedido("Yara",FormaDePagamento.pix);
+        Pedido Pedido2 = new Pedido("Yara",FormaDePagamento.PIX);
         //adicionando itens ao pedido
         //Pedido2.addItem(i3);
         //Pedido2.addItem(i4);

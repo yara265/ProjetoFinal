@@ -219,19 +219,19 @@ public class FazerPedido extends javax.swing.JFrame {
         
         if (strFormaPag=="Dinheiro"){
             this.pedidoteste.cliente = strNomeCliente;
-            this.pedidoteste.formaDePagamento = FormaDePagamento.dinheiro;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.DINHEIRO;
         }
         if (strFormaPag=="Debito"){
             this.pedidoteste.cliente = strNomeCliente;
-            this.pedidoteste.formaDePagamento = FormaDePagamento.debito;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.DEBITO;
         }
         if (strFormaPag=="Credito"){
             this.pedidoteste.cliente = strNomeCliente;
-            this.pedidoteste.formaDePagamento = FormaDePagamento.credito;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.CREDITO;
         }
         if (strFormaPag=="Pix"){
             this.pedidoteste.cliente = strNomeCliente;
-            this.pedidoteste.formaDePagamento = FormaDePagamento.pix;
+            this.pedidoteste.formaDePagamento = FormaDePagamento.PIX;
         }
         Venda v1 = new Venda();
         v1 = (this.pedidoteste.finalizarPedido());
