@@ -74,9 +74,9 @@ public class Pedido {
     }
     
     public double valorPago(){
-        if (this.formaDePagamento == FormaDePagamento.credito 
-            || this.formaDePagamento == FormaDePagamento.debito 
-            || this.formaDePagamento == FormaDePagamento.pix){
+        if (this.formaDePagamento == FormaDePagamento.CREDITO
+            || this.formaDePagamento == FormaDePagamento.DEBITO
+            || this.formaDePagamento == FormaDePagamento.PIX){
                 return this.valorTotal();
         }
         
