@@ -4,34 +4,35 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 public class Desserializar {
-    
-    Venda venda;
-    ArrayList<Venda> vendxs = new ArrayList<Venda>();
-    String v;
-    
-    public Desserializar(){
+    private ArrayList<Venda> vendas = new ArrayList<>();
+
+    public Desserializar() {
     }
-    
-    public String desserializar(){
-        System.out.println("\n" + "\n"+ "\n"+ "\n"+ "\n"+ "\n");
-        try{
-            System.out.println("desserializando");
+
+    public String Desserializar() {
+        StringBuilder resultado = new StringBuilder();
+
+        try {
+            System.out.println("Iniciando desserialização: ");
+
             FileInputStream fin = new FileInputStream("vendas.ser");
             ObjectInputStream ois = new ObjectInputStream(fin);
-            
-            vendxs = (ArrayList<Venda>) ois.readObject();
-            
+
+            vendas = (ArrayList<Venda>) ois.readObject();
+
             ois.close();
             fin.close();
-            //System.out.println(v1);
-            for (Venda i: this.vendxs){
-                v += (i.finalizarPedidoTeste() + "\n");
+
+            for (Venda venda : vendas) {
+                resultado.append(venda.finalizarPedidoTeste()).append("\n");
             }
-            return v;
         }
-        catch (Exception e){
+        catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return"";
         }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return resultado.toString();
     }
 }
