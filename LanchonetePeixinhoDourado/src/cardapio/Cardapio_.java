@@ -8,12 +8,12 @@ import java.util.ArrayList;
 public class Cardapio_ {
 
     public ArrayList<Produto> produtos = new ArrayList<Produto>();
-            
+
     public Cardapio_(){
         Pizza p1 = new Pizza("Calabresa", true);
         Pizza p2 = new Pizza("Mussarela", true);
         Pizza p3 = new Pizza("Portuguesa", true);
-        
+
         Refrigerante r1 = new Refrigerante("Coca Cola", "280 ml");
         Refrigerante r2 = new Refrigerante("Coca Cola", "1000 ml");
         Refrigerante r3 = new Refrigerante("Pepsi", "280 ml");
@@ -27,7 +27,7 @@ public class Cardapio_ {
         Salgado s4 = new Salgado("jacare", "assado");
         Salgado s5 = new Salgado("Enrolado de Salsicha", "frito");
         Salgado s6 = new Salgado("Enrolado de Salsicha", "assado");
-        
+
         Sanduiche san1 = new Sanduiche("Barbecue","Integral","Queijo");
         Sanduiche san2 = new Sanduiche("Ketchup","Frances","Presunto");
         Sanduiche san3 = new Sanduiche("Chedar","Hamburguer","Pate de atum");
@@ -44,11 +44,11 @@ public class Cardapio_ {
         Vitamina v10 = new Vitamina("Maca", true, "800 ml");
         Vitamina v11 = new Vitamina("Abacate", true, "800 ml");
         Vitamina v12 = new Vitamina("Pera", true, "800 ml");
-        
+
         produtos.add(p1);
         produtos.add(p2);
         produtos.add(p3);
-        
+
         produtos.add(r1);
         produtos.add(r2);
         produtos.add(r3);
@@ -66,7 +66,7 @@ public class Cardapio_ {
         produtos.add(san1);
         produtos.add(san2);
         produtos.add(san3);
-       
+
         produtos.add(v1);
         produtos.add(v2);
         produtos.add(v1);
@@ -81,7 +81,7 @@ public class Cardapio_ {
         produtos.add(v11);
         produtos.add(v12);
     }
-    
+
     public String mostrar(){
         String a = "";
         for (Produto i: this.produtos){

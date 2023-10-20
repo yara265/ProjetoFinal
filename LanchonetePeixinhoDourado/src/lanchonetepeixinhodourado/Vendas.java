@@ -19,7 +19,7 @@ public class Vendas extends javax.swing.JFrame {
     String d2;
     
     public Vendas() {
-        d2 = d1.desserializar();
+        d2 = d1.Desserializar();
         initComponents();
         System.out.println(d2);
         textoVendas.setText(d2);
